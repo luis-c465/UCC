@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch App",
+      "request": "launch",
+      "mainClass": "luisc.ucc.App",
+      "projectName": "ucc",
+      "stepFilters": {
+        "skipClasses": ["$JDK"],
+        "skipSynthetics": false,
+        "skipStaticInitializers": false,
+        "skipConstructors": false
+      }
+    }
+  ]
+}
