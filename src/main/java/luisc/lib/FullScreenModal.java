@@ -66,7 +66,7 @@ public abstract class FullScreenModal extends Obj {
   }
 
   public void mouseClicked() {
-    if (!beginShowing && !a.header.helpBtn.hovered) {
+    if (!beginShowing) {
       show = false;
     }
   }
