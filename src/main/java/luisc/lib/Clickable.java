@@ -53,6 +53,20 @@ public abstract class Clickable extends Obj {
 
       checkHover();
       checkClick();
+
+      if (hovered) {
+        onHover();
+      }
+    }
+  }
+
+  /**
+   * Called when the object is hovered
+   * Changes the cursor to a hand
+   */
+  protected void onHover() {
+    if (!a.hoveringClickable) {
+      a.hoveringClickable = true;
     }
   }
 

@@ -11,6 +11,10 @@ import processing.core.PApplet;
  */
 public abstract class BaseApp extends PApplet {
 
+  public boolean hoveringClickable = false;
+
+  public int curCursor = PC.ARROW;
+
   public Random rand = new Random();
 
   public boolean doingIntro = true;
@@ -102,5 +106,15 @@ public abstract class BaseApp extends PApplet {
 
   protected static String getMainClassName() {
     return App.class.getName();
+  }
+
+  protected void updateHoveringClickable() {
+    if (hoveringClickable) {
+      cursor(PC.HAND);
+    } else {
+      cursor(PC.ARROW);
+    }
+
+    hoveringClickable = false;
   }
 }

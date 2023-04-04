@@ -10,6 +10,7 @@ public abstract class Btn extends Clickable {
   protected String txt = "Click me!";
   protected int txt_size = 15;
   protected int color = 0xfffac83c;
+  protected int colorHover = 0xfffac83c;
   protected int txt_c = 0xff000000;
   protected int radius = 25;
 
@@ -48,7 +49,7 @@ public abstract class Btn extends Clickable {
     p.rectMode(PC.CENTER);
     p.shapeMode(PC.CENTER);
 
-    p.fill(color);
+    p.fill(hovered ? colorHover : color);
 
     p.noStroke();
     p.rect(x, y, w, h, radius, radius, radius, radius);
@@ -71,7 +72,11 @@ public abstract class Btn extends Clickable {
   }
 
   protected void setupText() {
-    txt_x = x - w / 6;
+    if (hasIcon) {
+      txt_x = x - w / 6;
+    } else {
+      txt_x = left + btn_safe;
+    }
     txt_y = y - 3;
   }
 }

@@ -30,9 +30,11 @@ public final class App extends BaseApp {
 
     startUp.update();
     if (doingStartUp) {
+      updateHoveringClickable();
       return;
     }
     // Actually draw the game here
+
   }
 
   @Override
