@@ -73,6 +73,7 @@ public class StartUp extends Transitionable {
     @Override
     protected void onClick() {
       p.println("Play button clicked");
+      a.saver.save();
     }
 
     public PlayBtn(App app) {

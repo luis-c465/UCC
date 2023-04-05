@@ -11,6 +11,10 @@ import processing.event.MouseEvent;
  */
 public final class App extends BaseApp {
 
+  public int test = Integer.MIN_VALUE;
+
+  public Saver saver;
+
   public boolean gameOver = false;
 
   // Game classes
@@ -39,6 +43,9 @@ public final class App extends BaseApp {
 
   @Override
   protected void setupAppClasses() {
+    saver = new Saver(this);
+    saver.load();
+
     Minim minim = new Minim(this);
     sound = minim.loadFile("loud.mp3");
 
