@@ -59,7 +59,7 @@ public class StartUp extends Transitionable {
       y = 600;
       w = 200;
 
-      txt = "Play!";
+      txt = a.saver.saves.size() == 0 ? "Play!" : "Continue!";
 
       color = Colors.btnColor;
       colorHover = Colors.btnColorHover;
@@ -72,8 +72,7 @@ public class StartUp extends Transitionable {
 
     @Override
     protected void onClick() {
-      p.println("Play button clicked");
-      a.saver.save();
+      a.scene = Scenes.Main;
     }
 
     public PlayBtn(App app) {
@@ -97,6 +96,11 @@ public class StartUp extends Transitionable {
       txt_space = 30;
 
       hasIcon = false;
+    }
+
+    @Override
+    protected void onClick() {
+      a.scene = Scenes.Extras;
     }
 
     public BehindTheScenesBtn(App app) {
@@ -125,6 +129,11 @@ public class StartUp extends Transitionable {
       hasIcon = false;
     }
 
+    @Override
+    protected void onClick() {
+      a.scene = Scenes.DLC;
+    }
+
     public DownloadableContentBtn(App app) {
       super(app);
     }
@@ -146,6 +155,11 @@ public class StartUp extends Transitionable {
       txt_space = 30;
 
       hasIcon = false;
+    }
+
+    @Override
+    protected void onClick() {
+      a.scene = Scenes.Quit;
     }
 
     public QuitBtn(App app) {

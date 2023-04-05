@@ -11,7 +11,10 @@ import processing.event.MouseEvent;
  */
 public final class App extends BaseApp {
 
+  public Scenes scene = Scenes.StartUp;
+
   public int test = Integer.MIN_VALUE;
+  public MainScene mainScene;
 
   public Saver saver;
 
@@ -32,13 +35,33 @@ public final class App extends BaseApp {
     imageMode(CORNER);
     image(r.i.bg, 0, 0, w, h);
 
-    startUp.update();
-    if (doingStartUp) {
-      updateHoveringClickable();
-      return;
-    }
-    // Actually draw the game here
+    // startUp.update();
+    // if (scene == Scenes.StartUp) {
+    //   updateHoveringClickable();
+    //   return;
+    // }
 
+    switch (scene) {
+      case StartUp:
+        startUp.update();
+        break;
+      case Main:
+        mainScene.update();
+        break;
+      case HelpModal:
+        helpModal.update();
+        break;
+      case DLC:
+        break;
+      case Extras:
+        break;
+      case Quit:
+        exit();
+        break;
+      default:
+        break;
+    }
+    updateHoveringClickable();
   }
 
   @Override
@@ -54,6 +77,9 @@ public final class App extends BaseApp {
 
     helpModal = new HelpModal(this);
     helpModal.setup();
+
+    mainScene = new MainScene(this);
+    mainScene.setup();
   }
 
   @Override

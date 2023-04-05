@@ -11,6 +11,8 @@ public class Data {
 
   public int test = 0;
 
+  // Bellow here is not important
+
   public void load(App a) {
     try {
       copyFields(this, a);
