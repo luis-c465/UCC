@@ -11,6 +11,7 @@ import processing.core.PImage;
 
 public abstract class Dialogue extends Obj {
 
+  private static final int characterWidth = 250;
   private static final int txtBoxH = 300;
   private static final int txtBoxW = 800;
   private static final int txtBoxY = 700 - 50;
@@ -26,8 +27,17 @@ public abstract class Dialogue extends Obj {
   public int currentCharacter = 0;
 
   @Override
-  protected void _setup() {
+  protected void preSetup() {
     textBoxBtn = new TextBoxBtn(a);
+  }
+
+  @Override
+  protected void postSetup() {
+    // Go through all values in the characters map and resize them
+    for (Map.Entry<String, PImage> entry : characters.entrySet()) {
+      PImage img = entry.getValue();
+      img.resize(characterWidth, 0);
+    }
   }
 
   /**
@@ -47,14 +57,21 @@ public abstract class Dialogue extends Obj {
 
     p.imageMode(PC.CORNER);
     p.image(r.i.textBox, txtBoxX, txtBoxY, txtBoxW, txtBoxH);
-    p.image(img, 50, 300, 250, 250);
+    p.image(img, 50, 300);
 
     p.textAlign(PC.LEFT, PC.TOP);
     p.textSize(32);
-    p.text(t.text.substring(0, currentCharacter), 100 + 20, 700 + 20);
+    p.text(
+      t.text.substring(0, currentCharacter),
+      100 + 20,
+      700 + 20,
+      txtBoxW - 40,
+      txtBoxH - 20
+    );
 
     if (currentCharacter < t.text.length()) {
-      currentCharacter++;
+      // currentCharacter++;
+      currentCharacter = Math.min(currentCharacter + 5, t.text.length());
     }
 
     textBoxBtn.update();
