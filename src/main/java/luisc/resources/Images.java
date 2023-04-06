@@ -15,6 +15,7 @@ public class Images extends ResourceHolder<PImage> {
   public PImage water;
   public PImage enter;
   public PImage winner;
+  public PImage textBox;
 
   @Override
   protected void load() {
@@ -29,6 +30,8 @@ public class Images extends ResourceHolder<PImage> {
 
     enter = p.loadImage("enter.png");
     winner = p.loadImage("winner.jpeg");
+
+    textBox = p.loadImage("textBox.png");
   }
 
   public Images(BaseApp p) {

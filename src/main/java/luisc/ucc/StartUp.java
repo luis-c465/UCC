@@ -59,7 +59,11 @@ public class StartUp extends Transitionable {
       y = 600;
       w = 200;
 
-      txt = a.saver.saves.size() == 0 ? "Play!" : "Continue!";
+      if (App.loadSaves) {
+        txt = a.saver.saves.size() == 0 ? "Play!" : "Continue!";
+      } else {
+        txt = "Play!";
+      }
 
       color = Colors.btnColor;
       colorHover = Colors.btnColorHover;

@@ -3,6 +3,7 @@
     {
       "type": "java",
       "name": "Launch App",
+      "console": "internalConsole",
       "request": "launch",
       "mainClass": "luisc.ucc.App",
       "projectName": "ucc",

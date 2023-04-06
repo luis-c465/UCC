@@ -11,7 +11,9 @@ import processing.event.MouseEvent;
  */
 public final class App extends BaseApp {
 
-  public Scenes scene = Scenes.StartUp;
+  public static final boolean loadSaves = false;
+
+  public Scenes scene = Scenes.Main;
 
   public int test = Integer.MIN_VALUE;
   public MainScene mainScene;
@@ -27,6 +29,8 @@ public final class App extends BaseApp {
   public int turnNum = 1;
 
   public AudioPlayer sound;
+
+  public TestDialogue testDialogue;
 
   @Override
   public void draw() {
@@ -66,8 +70,11 @@ public final class App extends BaseApp {
 
   @Override
   protected void setupAppClasses() {
-    saver = new Saver(this);
-    saver.load();
+    // Loading saves takes a long time for debugging purposes
+    if (loadSaves) {
+      saver = new Saver(this);
+      saver.load();
+    }
 
     Minim minim = new Minim(this);
     sound = minim.loadFile("loud.mp3");
@@ -80,6 +87,9 @@ public final class App extends BaseApp {
 
     mainScene = new MainScene(this);
     mainScene.setup();
+
+    testDialogue = new TestDialogue(this);
+    testDialogue.setup();
   }
 
   @Override

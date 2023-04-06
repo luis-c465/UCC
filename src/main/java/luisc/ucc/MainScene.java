@@ -13,6 +13,8 @@ public class MainScene extends Obj {
     p.fill(255);
     p.rectMode(PC.CORNER);
     p.rect(500, 500, 25, 25);
+
+    a.testDialogue.update();
   }
 
   public MainScene(App a) {

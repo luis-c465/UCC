@@ -17,7 +17,10 @@ public abstract class KeyboardBtn extends Clickable {
   protected void _update() {
     p.imageMode(PC.CENTER);
     p.image(img, x, y);
+  }
 
+  @Override
+  protected void postUpdate() {
     if (p.keyCode == kc) {
       if (!clicked && !clicking) {
         clicked = true;
@@ -28,6 +31,8 @@ public abstract class KeyboardBtn extends Clickable {
 
       p.keyCode = 0;
     }
+
+    super.postUpdate();
   }
 
   // Resize the dimensions of the button to be equal to the current w and height
