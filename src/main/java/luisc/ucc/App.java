@@ -30,7 +30,7 @@ public final class App extends BaseApp {
 
   public AudioPlayer sound;
 
-  public SussyDialogue testDialogue;
+  public TestTwoCharDialogue testDialogue;
 
   @Override
   public void draw() {
@@ -88,7 +88,7 @@ public final class App extends BaseApp {
     mainScene = new MainScene(this);
     mainScene.setup();
 
-    testDialogue = new SussyDialogue(this);
+    testDialogue = new TestTwoCharDialogue(this);
     testDialogue.setup();
   }
 

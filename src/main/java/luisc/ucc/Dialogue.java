@@ -9,13 +9,16 @@ import luisc.lib.Obj;
 import luisc.lib.PC;
 import processing.core.PImage;
 
+/**
+ * A dialogue is a sequence of text that is displayed on the screen
+ */
 public abstract class Dialogue extends Obj {
 
-  private static final int characterWidth = 250;
-  private static final int txtBoxH = 300;
-  private static final int txtBoxW = 800;
-  private static final int txtBoxY = 700 - 50;
-  private static final int txtBoxX = 100;
+  protected static final int characterWidth = 250;
+  protected static final int txtBoxH = 300;
+  protected static final int txtBoxW = 800;
+  protected static final int txtBoxY = 700 - 50;
+  protected static final int txtBoxX = 100;
 
   public TextBoxBtn textBoxBtn;
 
