@@ -14,6 +14,7 @@ import processing.core.PImage;
  */
 public abstract class Dialogue extends Obj {
 
+  private static final int textSize = 25;
   protected static final int characterWidth = 250;
   protected static final int txtBoxH = 300;
   protected static final int txtBoxW = 800;
@@ -63,7 +64,13 @@ public abstract class Dialogue extends Obj {
     p.image(img, 50, 300);
 
     p.textAlign(PC.LEFT, PC.TOP);
-    p.textSize(32);
+
+    // Character
+    p.textSize(20);
+    p.text(t.character, txtBoxX + 35, txtBoxY + 15);
+
+    // Dialogue
+    p.textSize(textSize);
     p.text(
       t.text.substring(0, currentCharacter),
       100 + 20,

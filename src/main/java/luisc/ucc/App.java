@@ -30,14 +30,14 @@ public final class App extends BaseApp {
 
   public AudioPlayer sound;
 
-  public TestTwoCharDialogue testDialogue;
+  public SkledDialogue testDialogue;
 
   @Override
   public void draw() {
     defaultSettings();
 
     imageMode(CORNER);
-    image(r.i.bg, 0, 0, w, h);
+    // image(r.i.bg, 0, 0, w, h);
 
     // startUp.update();
     // if (scene == Scenes.StartUp) {
@@ -88,7 +88,7 @@ public final class App extends BaseApp {
     mainScene = new MainScene(this);
     mainScene.setup();
 
-    testDialogue = new TestTwoCharDialogue(this);
+    testDialogue = new SkledDialogue(this);
     testDialogue.setup();
   }
 

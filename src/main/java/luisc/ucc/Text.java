@@ -2,9 +2,9 @@ package luisc.ucc;
 
 public class Text {
 
-  public String character;
-  public String emotion;
-  public String text;
+  public String character = "";
+  public String emotion = "";
+  public String text = "";
 
   public Text(String character, String emotion, String text) {
     this.character = character;
@@ -13,14 +13,22 @@ public class Text {
   }
 
   public Text(String all) {
-    String[] parts = all.split("/");
-    this.character = parts[0];
-    this.emotion = parts[1];
-    this.text = parts[2];
+    if (all.charAt(0) == '[') {
+      text = all;
+      return;
+    }
+
+    String[] parts = all.split(":");
+
+    String[] first = parts[0].split("/");
+    this.character = first[0];
+    this.emotion = first.length > 1 ? first[1] : "";
+
+    this.text = parts[1];
   }
 
   public String toString() {
-    return character + "/" + emotion + "/" + text;
+    return character + "/" + emotion + ":" + text;
   }
 
   public String getIdentifier() {
