@@ -38,6 +38,8 @@ public abstract class Dialogue extends Obj {
   @Override
   protected void postSetup() {
     // Go through all values in the characters map and resize them
+    add("/", r.i.transparent);
+
     for (Map.Entry<String, PImage> entry : characters.entrySet()) {
       PImage img = entry.getValue();
       img.resize(characterWidth, 0);

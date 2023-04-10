@@ -12,7 +12,6 @@ public class SkledDialogue extends Dialogue {
     add("Gunner/", p.loadImage("military.png"));
     add("Medical Examiner/", p.loadImage("medic.png"));
     add("Security Officer/", p.loadImage("pollice.png"));
-    add("/", p.loadImage("transparent.png"));
 
     add(
       "MC: The Skeld. A sizeable freighter, but still feels cramped. Maybe going to Mira HQ on this ship wasn't the best idea. But i'll be damned if I wasn't lucky enough to get a case to work on there."
