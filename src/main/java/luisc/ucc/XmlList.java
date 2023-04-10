@@ -16,6 +16,7 @@ import java.util.Set;
  *
  * @author Guilherme Silveira
  */
+@SuppressWarnings("all")
 public class XmlList<T> extends AbstractList<T> {
 
   private final XmlMap<Integer, T> map;
