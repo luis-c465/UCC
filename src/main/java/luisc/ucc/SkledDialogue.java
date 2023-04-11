@@ -24,7 +24,7 @@ public class SkledDialogue extends Dialogue {
     );
 
     add(
-      "Security Officer: That's a fair point. But it's good that you've atleast got a case. I'm going to go check in with the navigator and see what the hold up is about. We aren't flying through an asteroid belt so i'm a little concerned."
+      "Security Officer: That's a fair point. But it's good that you've at least got a case. I'm going to go check in with the navigator and see what the hold up is about. We aren't flying through an asteroid belt so i'm a little concerned."
     );
 
     add(
