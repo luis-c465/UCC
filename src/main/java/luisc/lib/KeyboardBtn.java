@@ -29,6 +29,10 @@ public abstract class KeyboardBtn extends Clickable {
         clicked = false;
       }
 
+      if (clicked) {
+        onClick();
+      }
+
       p.keyCode = 0;
     }
 

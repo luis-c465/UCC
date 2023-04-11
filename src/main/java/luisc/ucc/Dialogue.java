@@ -14,6 +14,7 @@ import processing.core.PImage;
  */
 public abstract class Dialogue extends Obj {
 
+  private static final int charStep = Integer.MAX_VALUE;
   private static final int textSize = 25;
   protected static final int characterWidth = 250;
   protected static final int txtBoxH = 300;
@@ -29,6 +30,8 @@ public abstract class Dialogue extends Obj {
 
   public int currentText = 0;
   public int currentCharacter = 0;
+
+  public boolean done = false;
 
   @Override
   protected void preSetup() {
@@ -69,7 +72,7 @@ public abstract class Dialogue extends Obj {
 
     // Character
     p.textSize(20);
-    p.text(t.character, txtBoxX + 35, txtBoxY + 15);
+    p.text(t.character, txtBoxX + 45, txtBoxY + 20);
 
     // Dialogue
     p.textSize(textSize);
@@ -83,7 +86,7 @@ public abstract class Dialogue extends Obj {
 
     if (currentCharacter < t.text.length()) {
       // currentCharacter++;
-      currentCharacter = Math.min(currentCharacter + 5, t.text.length());
+      currentCharacter = Math.min(currentCharacter + charStep, t.text.length());
     }
 
     textBoxBtn.update();
@@ -120,6 +123,17 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void preUpdate() {
+      if (
+        currentCharacter <= text.get(currentText).text.length() &&
+        (currentText + 1) >= text.size()
+      ) {
+        done = true;
+        shouldCheck = false;
+
+        super.preUpdate();
+        return;
+      }
+
       if (
         currentCharacter < text.get(currentText).text.length() ||
         (currentText + 1) >= text.size()

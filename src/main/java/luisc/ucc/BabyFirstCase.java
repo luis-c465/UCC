@@ -38,6 +38,7 @@ public class BabyFirstCase extends Dialogue {
     add("MC: Oh, sorry, I thought you said Jesse from breaking bad");
 
     add("MC: Anyways, lets go find jesse");
+    add("MC: Lets look in the halls for him first");
   }
 
   public BabyFirstCase(App app) {

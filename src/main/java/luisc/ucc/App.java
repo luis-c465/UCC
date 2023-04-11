@@ -30,8 +30,6 @@ public final class App extends BaseApp {
 
   public AudioPlayer sound;
 
-  public BabyFirstCase testDialogue;
-
   @Override
   public void draw() {
     defaultSettings();
@@ -87,9 +85,6 @@ public final class App extends BaseApp {
 
     mainScene = new MainScene(this);
     mainScene.setup();
-
-    testDialogue = new BabyFirstCase(this);
-    testDialogue.setup();
   }
 
   @Override

@@ -1,20 +1,43 @@
 package luisc.ucc;
 
 import luisc.lib.Obj;
-import luisc.lib.PC;
 
 /**
  * Main scene class which well, plays the game
  */
 public class MainScene extends Obj {
 
+  BabyFirstCase babyFirstCase;
+  FindingJesse findingJesse;
+  TheLunchBox theLunchBox;
+  MathClassroom mathClassroom;
+
+  @Override
+  protected void _setup() {
+    babyFirstCase = new BabyFirstCase(a);
+    babyFirstCase.setup();
+
+    findingJesse = new FindingJesse(a);
+    findingJesse.setup();
+
+    theLunchBox = new TheLunchBox(a);
+    theLunchBox.setup();
+
+    mathClassroom = new MathClassroom(a);
+    mathClassroom.setup();
+  }
+
   @Override
   protected void _update() {
-    p.fill(255);
-    p.rectMode(PC.CORNER);
-    p.rect(500, 500, 25, 25);
-
-    a.testDialogue.update();
+    if (!babyFirstCase.done) {
+      babyFirstCase.update();
+    } else if (!findingJesse.done) {
+      findingJesse.update();
+    } else if (!theLunchBox.done) {
+      theLunchBox.update();
+    } else if (!mathClassroom.done) {
+      mathClassroom.update();
+    }
   }
 
   public MainScene(App a) {
