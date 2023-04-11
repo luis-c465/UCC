@@ -20,7 +20,7 @@ public class StartUp extends Transitionable {
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("startUp.jpeg");
+    bg = p.loadImage("title.png");
 
     startGameBtn = new PlayBtn(a);
     startGameBtn.setup();

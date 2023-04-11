@@ -13,7 +13,7 @@ public final class App extends BaseApp {
 
   public static final boolean loadSaves = false;
 
-  public Scenes scene = Scenes.Main;
+  public Scenes scene = Scenes.StartUp;
 
   public int test = Integer.MIN_VALUE;
   public MainScene mainScene;
