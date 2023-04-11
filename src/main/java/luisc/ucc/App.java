@@ -30,7 +30,7 @@ public final class App extends BaseApp {
 
   public AudioPlayer sound;
 
-  public SkledDialogue testDialogue;
+  public BabyFirstCase testDialogue;
 
   @Override
   public void draw() {
@@ -88,7 +88,7 @@ public final class App extends BaseApp {
     mainScene = new MainScene(this);
     mainScene.setup();
 
-    testDialogue = new SkledDialogue(this);
+    testDialogue = new BabyFirstCase(this);
     testDialogue.setup();
   }
 
