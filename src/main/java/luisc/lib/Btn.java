@@ -7,7 +7,7 @@ public abstract class Btn extends Clickable {
 
   protected final int btn_safe = 10;
 
-  protected String txt = "Click me!";
+  public String txt = "Click me!";
   protected int txt_size = 15;
   protected int color = 0xfffac83c;
   protected int colorHover = 0xfffac83c;
@@ -31,6 +31,15 @@ public abstract class Btn extends Clickable {
 
   public Btn(App app) {
     super(app);
+  }
+
+  public Btn(App app, String txt, int x, int y) {
+    super(app);
+    this.txt = txt;
+    this.x = x;
+    this.y = y;
+
+    setup();
   }
 
   protected void postSetup() {

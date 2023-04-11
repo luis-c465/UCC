@@ -12,6 +12,8 @@ public class MainScene extends Obj {
   TheLunchBox theLunchBox;
   MathClassroom mathClassroom;
 
+  CafeteriaExploration cafeteriaExploration;
+
   @Override
   protected void _setup() {
     babyFirstCase = new BabyFirstCase(a);
@@ -25,19 +27,23 @@ public class MainScene extends Obj {
 
     mathClassroom = new MathClassroom(a);
     mathClassroom.setup();
+
+    cafeteriaExploration = new CafeteriaExploration(a);
+    cafeteriaExploration.setup();
   }
 
   @Override
   protected void _update() {
-    if (!babyFirstCase.done) {
-      babyFirstCase.update();
-    } else if (!findingJesse.done) {
-      findingJesse.update();
-    } else if (!theLunchBox.done) {
-      theLunchBox.update();
-    } else if (!mathClassroom.done) {
-      mathClassroom.update();
-    }
+    cafeteriaExploration.update();
+    // if (!babyFirstCase.done) {
+    //   babyFirstCase.update();
+    // } else if (!findingJesse.done) {
+    //   findingJesse.update();
+    // } else if (!theLunchBox.done) {
+    //   theLunchBox.update();
+    // } else if (!mathClassroom.done) {
+    //   mathClassroom.update();
+    // }
   }
 
   public MainScene(App a) {
