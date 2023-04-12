@@ -1,7 +1,6 @@
 package luisc.ucc.explore;
 
 import luisc.ucc.App;
-import luisc.ucc.ExplorationBtn;
 
 public class Medical extends Exploration {
 

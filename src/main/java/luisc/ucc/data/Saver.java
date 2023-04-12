@@ -1,4 +1,4 @@
-package luisc.ucc;
+package luisc.ucc.data;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.persistence.FilePersistenceStrategy;
@@ -6,6 +6,7 @@ import com.thoughtworks.xstream.persistence.PersistenceStrategy;
 import com.thoughtworks.xstream.security.AnyTypePermission;
 import java.io.File;
 import java.util.List;
+import luisc.ucc.App;
 
 /**
  * Class which saves and loads the save data for the game

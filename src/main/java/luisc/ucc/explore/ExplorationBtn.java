@@ -1,7 +1,8 @@
-package luisc.ucc;
+package luisc.ucc.explore;
 
 import luisc.lib.Btn;
 import luisc.resources.Colors;
+import luisc.ucc.App;
 
 public class ExplorationBtn extends Btn {
 

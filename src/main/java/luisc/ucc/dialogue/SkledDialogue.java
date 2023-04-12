@@ -1,4 +1,6 @@
-package luisc.ucc;
+package luisc.ucc.dialogue;
+
+import luisc.ucc.App;
 
 public class SkledDialogue extends Dialogue {
 

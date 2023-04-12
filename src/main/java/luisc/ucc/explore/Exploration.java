@@ -3,7 +3,6 @@ package luisc.ucc.explore;
 import luisc.lib.Btn;
 import luisc.lib.Obj;
 import luisc.ucc.App;
-import luisc.ucc.ExplorationBtn;
 import processing.core.PImage;
 
 public class Exploration extends Obj {

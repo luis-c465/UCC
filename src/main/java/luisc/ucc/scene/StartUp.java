@@ -1,9 +1,10 @@
-package luisc.ucc;
+package luisc.ucc.scene;
 
 import luisc.lib.Btn;
 import luisc.lib.PC;
 import luisc.lib.Transitionable;
 import luisc.resources.Colors;
+import luisc.ucc.App;
 import processing.core.PImage;
 
 /**

@@ -1,7 +1,8 @@
-package luisc.ucc;
+package luisc.ucc.data;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.lang.reflect.Field;
+import luisc.ucc.App;
 
 /**
  * Class which stores the data to be saved

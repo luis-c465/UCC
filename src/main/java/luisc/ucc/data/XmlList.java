@@ -1,4 +1,4 @@
-package luisc.ucc;
+package luisc.ucc.data;
 
 import com.thoughtworks.xstream.persistence.PersistenceStrategy;
 import java.util.AbstractList;

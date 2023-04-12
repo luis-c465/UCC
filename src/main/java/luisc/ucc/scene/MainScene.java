@@ -1,6 +1,11 @@
-package luisc.ucc;
+package luisc.ucc.scene;
 
 import luisc.lib.Obj;
+import luisc.ucc.App;
+import luisc.ucc.dialogue.BabyFirstCase;
+import luisc.ucc.dialogue.FindingJesse;
+import luisc.ucc.dialogue.MathClassroom;
+import luisc.ucc.dialogue.TheLunchBox;
 import luisc.ucc.explore.CafeteriaExploration;
 import luisc.ucc.explore.Exploration;
 

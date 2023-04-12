@@ -1,4 +1,4 @@
-package luisc.ucc;
+package luisc.ucc.scene;
 
 public enum Scenes {
   StartUp,

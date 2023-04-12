@@ -1,4 +1,4 @@
-package luisc.ucc;
+package luisc.ucc.dialogue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import java.util.Map;
 import luisc.lib.KeyboardBtn;
 import luisc.lib.Obj;
 import luisc.lib.PC;
+import luisc.ucc.App;
 import processing.core.PImage;
 
 /**

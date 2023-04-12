@@ -1,6 +1,7 @@
-package luisc.ucc;
+package luisc.ucc.dialogue;
 
 import luisc.lib.PC;
+import luisc.ucc.App;
 import processing.core.PImage;
 
 /**
