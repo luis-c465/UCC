@@ -8,7 +8,7 @@
       "mainClass": "luisc.ucc.App",
       "projectName": "ucc",
       "stepFilters": {
-        "skipClasses": ["$JDK"],
+        "skipClasses": ["$JDK", "$Libraries"],
         "skipSynthetics": false,
         "skipStaticInitializers": false,
         "skipConstructors": false

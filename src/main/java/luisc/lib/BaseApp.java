@@ -1,6 +1,7 @@
 package luisc.lib;
 
 import controlP5.ControlP5;
+import ddf.minim.Minim;
 import java.util.Random;
 import luisc.resources.Resources;
 import luisc.ucc.App;
@@ -26,6 +27,7 @@ public abstract class BaseApp extends PApplet {
 
   // * library classes
   public ControlP5 cp5;
+  public Minim minim;
 
   // Transition classes
   public TransitionIn transIn;
@@ -66,6 +68,7 @@ public abstract class BaseApp extends PApplet {
    * Setups util and library classes
    */
   protected void setupUtilAndLib() {
+    minim = new Minim(this);
     r = new Resources(this);
     cp5 = new ControlP5(this);
 

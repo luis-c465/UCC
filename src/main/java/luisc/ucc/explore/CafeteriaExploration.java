@@ -1,6 +1,9 @@
-package luisc.ucc;
+package luisc.ucc.explore;
 
-public class CafeteriaExploration extends ExplorationOptions {
+import luisc.ucc.App;
+import luisc.ucc.ExplorationBtn;
+
+public class CafeteriaExploration extends Exploration {
 
   public CafeteriaExploration(App app) {
     super(app);
@@ -8,8 +11,8 @@ public class CafeteriaExploration extends ExplorationOptions {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into left hallway")) {
-      App.println("Go into left hallway");
+    if (isBtnClicked("Go into right hallway")) {
+      setExploration(new MedicalHallway(a));
     }
   }
 

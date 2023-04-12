@@ -1,10 +1,12 @@
-package luisc.ucc;
+package luisc.ucc.explore;
 
 import luisc.lib.Btn;
 import luisc.lib.Obj;
+import luisc.ucc.App;
+import luisc.ucc.ExplorationBtn;
 import processing.core.PImage;
 
-public class ExplorationOptions extends Obj {
+public class Exploration extends Obj {
 
   public PImage bg;
   public ExplorationBtn[] btns;
@@ -37,7 +39,16 @@ public class ExplorationOptions extends Obj {
     return false;
   }
 
-  public ExplorationOptions(App app) {
+  protected PImage loadImage(String path) {
+    return p.loadImage("options/" + path);
+  }
+
+  protected void setExploration(Exploration exploration) {
+    a.mainScene.exploration = exploration;
+    exploration.setup();
+  }
+
+  public Exploration(App app) {
     super(app);
   }
 }

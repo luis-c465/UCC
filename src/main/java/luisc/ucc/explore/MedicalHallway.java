@@ -1,0 +1,35 @@
+package luisc.ucc.explore;
+
+import luisc.ucc.App;
+import luisc.ucc.ExplorationBtn;
+
+public class MedicalHallway extends Exploration {
+
+  public MedicalHallway(App app) {
+    super(app);
+  }
+
+  @Override
+  protected void _update() {
+    if (isBtnClicked("Go into medical")) {
+      App.println("Goes into medical");
+      setExploration(new Medical(a));
+    } else if (isBtnClicked("Go into reactor")) {
+      App.println("Goes into reactor ... Does nothing :(");
+    } else if (isBtnClicked("Go back into cafeteria")) {
+      setExploration(new CafeteriaExploration(a));
+    }
+  }
+
+  @Override
+  protected void _setup() {
+    bg = p.loadImage("options/medical-hallway.png");
+
+    btns =
+      new ExplorationBtn[] {
+        new ExplorationBtn(a, "Go into medical", 175, 623),
+        new ExplorationBtn(a, "Go into reactor", 900, 575),
+        new ExplorationBtn(a, "Go back into cafeteria", 500, 900),
+      };
+  }
+}

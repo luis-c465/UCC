@@ -1,7 +1,6 @@
 package luisc.ucc;
 
 import ddf.minim.AudioPlayer;
-import ddf.minim.Minim;
 import luisc.lib.BaseApp;
 import luisc.lib.HelpModal;
 import processing.event.MouseEvent;
@@ -73,9 +72,6 @@ public final class App extends BaseApp {
       saver = new Saver(this);
       saver.load();
     }
-
-    Minim minim = new Minim(this);
-    sound = minim.loadFile("loud.mp3");
 
     startUp = new StartUp(this);
     startUp.setup();

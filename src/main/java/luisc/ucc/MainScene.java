@@ -1,18 +1,20 @@
 package luisc.ucc;
 
 import luisc.lib.Obj;
+import luisc.ucc.explore.CafeteriaExploration;
+import luisc.ucc.explore.Exploration;
 
 /**
  * Main scene class which well, plays the game
  */
 public class MainScene extends Obj {
 
-  BabyFirstCase babyFirstCase;
-  FindingJesse findingJesse;
-  TheLunchBox theLunchBox;
-  MathClassroom mathClassroom;
+  public BabyFirstCase babyFirstCase;
+  public FindingJesse findingJesse;
+  public TheLunchBox theLunchBox;
+  public MathClassroom mathClassroom;
 
-  CafeteriaExploration cafeteriaExploration;
+  public Exploration exploration;
 
   @Override
   protected void _setup() {
@@ -28,13 +30,13 @@ public class MainScene extends Obj {
     mathClassroom = new MathClassroom(a);
     mathClassroom.setup();
 
-    cafeteriaExploration = new CafeteriaExploration(a);
-    cafeteriaExploration.setup();
+    exploration = new CafeteriaExploration(a);
+    exploration.setup();
   }
 
   @Override
   protected void _update() {
-    cafeteriaExploration.update();
+    exploration.update();
     // if (!babyFirstCase.done) {
     //   babyFirstCase.update();
     // } else if (!findingJesse.done) {
