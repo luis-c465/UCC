@@ -13,8 +13,8 @@ public class MedicalHallway extends Exploration {
     if (isBtnClicked("Go into medical")) {
       App.println("Goes into medical");
       setExploration(new Medical(a));
-    } else if (isBtnClicked("Go into reactor")) {
-      App.println("Goes into reactor ... Does nothing :(");
+    } else if (isBtnClicked("Go into reactor hallway")) {
+      setExploration(new ReactorHallway(a));
     } else if (isBtnClicked("Go back into cafeteria")) {
       setExploration(new CafeteriaExploration(a));
     }
@@ -27,7 +27,7 @@ public class MedicalHallway extends Exploration {
     btns =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into medical", 175, 623),
-        new ExplorationBtn(a, "Go into reactor", 900, 575),
+        new ExplorationBtn(a, "Go into reactor hallway", 900, 575),
         new ExplorationBtn(a, "Go back into cafeteria", 500, 900),
       };
   }

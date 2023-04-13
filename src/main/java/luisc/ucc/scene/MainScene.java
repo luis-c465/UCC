@@ -14,6 +14,9 @@ import luisc.ucc.explore.Exploration;
  */
 public class MainScene extends Obj {
 
+  public static final int TICKS_TO_SWITCH = 6;
+  public int ticksSwitched = 0;
+
   public BabyFirstCase babyFirstCase;
   public FindingJesse findingJesse;
   public TheLunchBox theLunchBox;
