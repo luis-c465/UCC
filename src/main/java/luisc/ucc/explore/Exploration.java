@@ -12,8 +12,8 @@ public class Exploration extends Obj {
   public Clickable[] clickables;
 
   @Override
-  protected void preUpdate() {
-    super.preUpdate();
+  protected void postUpdate() {
+    super.postUpdate();
 
     p.image(bg, 0, 0, App.w, App.h);
 

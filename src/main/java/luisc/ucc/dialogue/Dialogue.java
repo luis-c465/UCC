@@ -15,7 +15,9 @@ import processing.core.PImage;
  */
 public abstract class Dialogue extends Obj {
 
-  private static final int charStep = Integer.MAX_VALUE;
+  public boolean skipDialogue = true;
+
+  private static final int charStep = 5;
   private static final int textSize = 25;
   protected static final int characterWidth = 250;
   protected static final int txtBoxH = 300;
@@ -124,8 +126,17 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void preUpdate() {
+      if (!skipDialogue) {
+        if (clicked) {
+          done = true;
+        }
+
+        super.preUpdate();
+        return;
+      }
+
       if (
-        currentCharacter <= text.get(currentText).text.length() &&
+        currentCharacter >= text.get(currentText).text.length() &&
         (currentText + 1) >= text.size()
       ) {
         done = true;
@@ -166,6 +177,11 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void onClick() {
+      if (!skipDialogue) {
+        done = true;
+        return;
+      }
+
       currentCharacter = 0;
       currentText++;
     }

@@ -1,6 +1,7 @@
 package luisc.ucc;
 
-import ddf.minim.AudioPlayer;
+import java.util.HashSet;
+import java.util.Set;
 import luisc.lib.BaseApp;
 import luisc.lib.HelpModal;
 import luisc.ucc.data.Saver;
@@ -18,7 +19,6 @@ public final class App extends BaseApp {
 
   public Scenes scene = Scenes.StartUp;
 
-  public int test = Integer.MIN_VALUE;
   public MainScene mainScene;
 
   public Saver saver;
@@ -29,9 +29,9 @@ public final class App extends BaseApp {
   public StartUp startUp;
   public HelpModal helpModal;
 
-  public int turnNum = 1;
-
-  public AudioPlayer sound;
+  // Data values
+  public int test = Integer.MIN_VALUE;
+  public Set<String> evidence = new HashSet<>();
 
   @Override
   public void draw() {

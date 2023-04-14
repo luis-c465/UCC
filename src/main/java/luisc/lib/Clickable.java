@@ -25,8 +25,10 @@ public abstract class Clickable extends Obj {
   // ! So only set to true if necessary!
   protected boolean canMove = false;
 
-  // If the class should check if the object was clicked
-  // only set to false when the object leaves the screen and should not be checked!
+  /**
+   * If the class should check if the object was clicked
+   * only set to false when the object leaves the screen and should not be checked!
+   */
   protected boolean shouldCheck = true;
 
   protected int w = 150;
@@ -131,5 +133,13 @@ public abstract class Clickable extends Obj {
 
   public Clickable(App app) {
     super(app);
+  }
+
+  public Clickable(App app, int x, int y, int w, int h) {
+    super(app);
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
   }
 }

@@ -15,6 +15,7 @@ public class Resources {
   public Shapes s;
   public Colors c;
   public Fonts f;
+  public Characters ch;
   public Sounds sfx;
 
   public Resources(BaseApp p) {
@@ -22,6 +23,7 @@ public class Resources {
     s = new Shapes(p);
     c = new Colors(p);
     f = new Fonts(p);
+    ch = new Characters(p);
     sfx = new Sounds(p);
   }
 }
