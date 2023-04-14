@@ -19,11 +19,14 @@ public abstract class Dialogue extends Obj {
 
   private static final int charStep = 5;
   private static final int textSize = 25;
-  protected static final int characterWidth = 250;
-  protected static final int txtBoxH = 300;
-  protected static final int txtBoxW = 800;
-  protected static final int txtBoxY = 700 - 50;
-  protected static final int txtBoxX = 100;
+  public static final int characterWidth = 250;
+  public static final int txtBoxH = 300;
+  public static final int txtBoxW = 800;
+  public static final int txtBoxY = 700 - 50;
+
+  public static final int txtY = txtBoxY + 20;
+  public static final int txtBoxX = 100;
+  public static final int txtBoxPadding = 20;
 
   public TextBoxBtn textBoxBtn;
 
@@ -75,7 +78,7 @@ public abstract class Dialogue extends Obj {
 
     // Character
     p.textSize(20);
-    p.text(t.character, txtBoxX + 45, txtBoxY + 20);
+    p.text(t.character, txtBoxX + 45, txtY);
 
     // Dialogue
     p.textSize(textSize);

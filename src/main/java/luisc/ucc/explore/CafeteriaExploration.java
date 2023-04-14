@@ -14,6 +14,8 @@ public class CafeteriaExploration extends Exploration {
       setExploration(new MedicalHallway(a));
     } else if (isClicked("Go into left hallway")) {
       setExploration(new ElectricalHallway(a));
+    } else if (isClicked("Start court case")) {
+      a.mainScene.inCourt = true;
     }
   }
 
@@ -25,6 +27,7 @@ public class CafeteriaExploration extends Exploration {
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into left hallway", 200, 550),
         new ExplorationBtn(a, "Go into right hallway", 800, 615),
+        new ExplorationBtn(a, "Start court case", 485, 900),
       };
   }
 }

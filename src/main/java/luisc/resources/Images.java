@@ -37,7 +37,7 @@ public class Images extends ResourceHolder<PImage> {
 
     transparent = p.loadImage("transparent.png");
 
-    gamer = p.loadImage("gamer-small");
+    gamer = p.loadImage("gamer-small.png");
   }
 
   public Images(BaseApp p) {

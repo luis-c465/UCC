@@ -1,29 +1,23 @@
 package luisc.ucc.explore;
 
-import luisc.lib.Clickable;
-import luisc.lib.Obj;
+import luisc.lib.ClickableHolder;
 import luisc.ucc.App;
 import luisc.ucc.scene.MainScene;
 import processing.core.PImage;
 
-public class Exploration extends Obj {
+public class Exploration extends ClickableHolder {
 
   public PImage bg;
-  public Clickable[] clickables;
 
   @Override
   protected void postUpdate() {
-    super.postUpdate();
-
     p.image(bg, 0, 0, App.w, App.h);
-
-    for (Clickable btn : clickables) {
-      btn.update();
-    }
 
     if (a.mainScene.ticksSwitched > 0) {
       a.mainScene.ticksSwitched--;
     }
+
+    super.postUpdate();
   }
 
   /**
@@ -31,17 +25,6 @@ public class Exploration extends Obj {
    */
   @Override
   protected void _update() {}
-
-  protected boolean isClicked(String identifier) {
-    for (Clickable btn : clickables) {
-      if (btn.identifier.equals(identifier)) {
-        return btn.clicked;
-      }
-    }
-
-    // Btn not found
-    return false;
-  }
 
   protected PImage loadImage(String path) {
     return p.loadImage("options/" + path);

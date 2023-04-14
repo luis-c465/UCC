@@ -27,10 +27,9 @@ package gifAnimation;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import processing.core.PApplet;
-import processing.core.PConstants;
 import processing.core.PImage;
 
-public class Gif extends PImage implements PConstants, Runnable {
+public class Gif extends PImage implements Runnable {
 
   private PApplet parent;
   Thread runner;
