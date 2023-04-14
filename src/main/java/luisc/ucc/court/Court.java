@@ -5,9 +5,10 @@ import luisc.ucc.App;
 import luisc.ucc.dialogue.Dialogue;
 import luisc.ucc.dialogue.Options;
 import luisc.ucc.dialogue.StartDialogue;
-import luisc.ucc.scene.MainScene;
 
 public class Court extends Obj {
+
+  public static final int TICKS_TO_SWITCH = 10;
 
   /**
    * Count of the number of skill issues by the player
@@ -51,7 +52,7 @@ public class Court extends Obj {
 
     dialogue = dia;
     dia.setup();
-    a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
+    a.mainScene.ticksSwitched = TICKS_TO_SWITCH;
   }
 
   public void setOptions(Options opts) {
@@ -61,6 +62,6 @@ public class Court extends Obj {
 
     options = opts;
     opts.setup();
-    a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
+    a.mainScene.ticksSwitched = TICKS_TO_SWITCH;
   }
 }

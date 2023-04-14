@@ -205,6 +205,14 @@ public abstract class Dialogue extends Obj {
    */
   public void onDone() {}
 
+  protected void setDialogue(Dialogue dia) {
+    a.mainScene.court.setDialogue(dia);
+  }
+
+  protected void setOptions(Options opts) {
+    a.mainScene.court.setOptions(opts);
+  }
+
   public Dialogue(App app) {
     super(app);
   }
