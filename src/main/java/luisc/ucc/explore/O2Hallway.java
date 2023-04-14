@@ -10,13 +10,13 @@ public class O2Hallway extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into navigation")) {
+    if (isClicked("Go into navigation")) {
       setExploration(new Navigation(a));
-    } else if (isBtnClicked("Go into o2")) {
+    } else if (isClicked("Go into o2")) {
       setExploration(new O2(a));
-    } else if (isBtnClicked("Go into weapons")) {
+    } else if (isClicked("Go into weapons")) {
       setExploration(new Weapons(a));
-    } else if (isBtnClicked("Go back into shields")) {
+    } else if (isClicked("Go back into shields")) {
       setExploration(new Shields(a));
     }
   }
@@ -25,7 +25,7 @@ public class O2Hallway extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/o2-hallway.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into navigation", 776, 661),
         new ExplorationBtn(a, "Go into o2", 184, 457),

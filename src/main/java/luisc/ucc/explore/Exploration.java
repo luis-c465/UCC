@@ -1,6 +1,6 @@
 package luisc.ucc.explore;
 
-import luisc.lib.Btn;
+import luisc.lib.Clickable;
 import luisc.lib.Obj;
 import luisc.ucc.App;
 import luisc.ucc.scene.MainScene;
@@ -9,7 +9,7 @@ import processing.core.PImage;
 public class Exploration extends Obj {
 
   public PImage bg;
-  public ExplorationBtn[] btns;
+  public Clickable[] clickables;
 
   @Override
   protected void preUpdate() {
@@ -17,7 +17,7 @@ public class Exploration extends Obj {
 
     p.image(bg, 0, 0, App.w, App.h);
 
-    for (Btn btn : btns) {
+    for (Clickable btn : clickables) {
       btn.update();
     }
 
@@ -32,9 +32,9 @@ public class Exploration extends Obj {
   @Override
   protected void _update() {}
 
-  protected boolean isBtnClicked(String txt) {
-    for (Btn btn : btns) {
-      if (btn.txt.equals(txt)) {
+  protected boolean isClicked(String identifier) {
+    for (Clickable btn : clickables) {
+      if (btn.identifier.equals(identifier)) {
         return btn.clicked;
       }
     }
@@ -47,6 +47,12 @@ public class Exploration extends Obj {
     return p.loadImage("options/" + path);
   }
 
+  /**
+   * Sets the exploration
+   *
+   * Will not be set if the exploration was changed in the last couple frames
+   * I.E. there is a cool down between changing scenes
+   */
   protected void setExploration(Exploration exploration) {
     if (a.mainScene.ticksSwitched != 0) {
       return;

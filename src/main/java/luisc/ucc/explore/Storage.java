@@ -10,7 +10,7 @@ public class Storage extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go coms hallway")) {
+    if (isClicked("Go coms hallway")) {
       setExploration(new ComsHallway(a));
     }
   }
@@ -19,7 +19,7 @@ public class Storage extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/storage.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go coms hallway", 413, 683),
       };

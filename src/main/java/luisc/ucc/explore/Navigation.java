@@ -10,7 +10,7 @@ public class Navigation extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go back")) {
+    if (isClicked("Go back")) {
       setExploration(new O2Hallway(a));
     }
   }
@@ -19,6 +19,7 @@ public class Navigation extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/navigation.png");
 
-    btns = new ExplorationBtn[] { new ExplorationBtn(a, "Go back", 482, 950) };
+    clickables =
+      new ExplorationBtn[] { new ExplorationBtn(a, "Go back", 482, 950) };
   }
 }

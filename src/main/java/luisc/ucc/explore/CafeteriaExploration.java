@@ -10,7 +10,7 @@ public class CafeteriaExploration extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into right hallway")) {
+    if (isClicked("Go into right hallway")) {
       setExploration(new MedicalHallway(a));
     }
   }
@@ -19,7 +19,7 @@ public class CafeteriaExploration extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/cafeteria.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into left hallway", 200, 550),
         new ExplorationBtn(a, "Go into right hallway", 800, 615),

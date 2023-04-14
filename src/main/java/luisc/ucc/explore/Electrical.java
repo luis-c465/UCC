@@ -10,7 +10,7 @@ public class Electrical extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go back outside")) {
+    if (isClicked("Go back outside")) {
       setExploration(new ElectricalHallway(a));
     }
   }
@@ -19,7 +19,7 @@ public class Electrical extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/electrical-1.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go back outside", 800, 800),
       };

@@ -10,12 +10,12 @@ public class MedicalHallway extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into medical")) {
+    if (isClicked("Go into medical")) {
       App.println("Goes into medical");
       setExploration(new Medical(a));
-    } else if (isBtnClicked("Go into reactor hallway")) {
+    } else if (isClicked("Go into reactor hallway")) {
       setExploration(new ReactorHallway(a));
-    } else if (isBtnClicked("Go back into cafeteria")) {
+    } else if (isClicked("Go back into cafeteria")) {
       setExploration(new CafeteriaExploration(a));
     }
   }
@@ -24,7 +24,7 @@ public class MedicalHallway extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/medical-hallway.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into medical", 175, 623),
         new ExplorationBtn(a, "Go into reactor hallway", 900, 575),

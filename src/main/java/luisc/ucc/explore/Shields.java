@@ -10,9 +10,9 @@ public class Shields extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go back into hallway")) {
+    if (isClicked("Go back into hallway")) {
       setExploration(new ComsHallway(a));
-    } else if (isBtnClicked("Go into next hallway")) {
+    } else if (isClicked("Go into next hallway")) {
       setExploration(new O2Hallway(a));
     }
   }
@@ -21,7 +21,7 @@ public class Shields extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/sheidls.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go back into hallway", 100, 758),
         new ExplorationBtn(a, "Go into next hallway", 570, 341),

@@ -9,6 +9,8 @@ public class ExplorationBtn extends Btn {
   public ExplorationBtn(App app, String txt, int x, int y) {
     super(app);
     this.txt = txt;
+    this.identifier = txt;
+
     this.x = x;
     this.y = y;
 

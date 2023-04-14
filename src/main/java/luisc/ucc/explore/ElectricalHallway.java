@@ -10,9 +10,9 @@ public class ElectricalHallway extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into electrical")) {
+    if (isClicked("Go into electrical")) {
       setExploration(new Electrical(a));
-    } else if (isBtnClicked("Go into storage")) {
+    } else if (isClicked("Go into storage")) {
       setExploration(new Storage(a));
     }
   }
@@ -21,7 +21,7 @@ public class ElectricalHallway extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/electrical-hallway.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into electrical", 100, 430),
         new ExplorationBtn(a, "Go into storage", 840, 600),

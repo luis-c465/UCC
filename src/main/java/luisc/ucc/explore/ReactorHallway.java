@@ -10,11 +10,11 @@ public class ReactorHallway extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into security")) {
+    if (isClicked("Go into security")) {
       setExploration(new Security(a));
-    } else if (isBtnClicked("Go into reactor")) {
+    } else if (isClicked("Go into reactor")) {
       setExploration(new Reactor(a));
-    } else if (isBtnClicked("Go into next hallway")) {
+    } else if (isClicked("Go into next hallway")) {
       setExploration(new ElectricalHallway(a));
     }
   }
@@ -23,7 +23,7 @@ public class ReactorHallway extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/reactor-hallway.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into security", 150, 586),
         new ExplorationBtn(a, "Go into reactor", 840, 600),

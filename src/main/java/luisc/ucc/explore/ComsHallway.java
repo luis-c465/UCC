@@ -10,9 +10,9 @@ public class ComsHallway extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into coms")) {
+    if (isClicked("Go into coms")) {
       setExploration(new Coms(a));
-    } else if (isBtnClicked("Go into shields")) {
+    } else if (isClicked("Go into shields")) {
       setExploration(new Shields(a));
     }
   }
@@ -21,7 +21,7 @@ public class ComsHallway extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/coms-hallway.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into coms", 650, 730),
         new ExplorationBtn(a, "Go into shields", 157, 622),

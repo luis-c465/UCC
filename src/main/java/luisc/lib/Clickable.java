@@ -7,6 +7,8 @@ import luisc.ucc.App;
  */
 public abstract class Clickable extends Obj {
 
+  public String identifier = null;
+
   // ! represents the center of the object
   public int x = 500;
   public int y = 500;

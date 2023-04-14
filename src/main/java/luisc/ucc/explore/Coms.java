@@ -10,7 +10,7 @@ public class Coms extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go back")) {
+    if (isClicked("Go back")) {
       setExploration(new ComsHallway(a));
     }
   }
@@ -19,6 +19,7 @@ public class Coms extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/coms.png");
 
-    btns = new ExplorationBtn[] { new ExplorationBtn(a, "Go back", 664, 623) };
+    clickables =
+      new ExplorationBtn[] { new ExplorationBtn(a, "Go back", 664, 623) };
   }
 }

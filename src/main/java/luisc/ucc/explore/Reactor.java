@@ -10,7 +10,7 @@ public class Reactor extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Go into hallway")) {
+    if (isClicked("Go into hallway")) {
       setExploration(new ReactorHallway(a));
     }
   }
@@ -19,7 +19,7 @@ public class Reactor extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/reactor.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Go into hallway", 500, 900),
       };

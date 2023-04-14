@@ -10,11 +10,11 @@ public class Medical extends Exploration {
 
   @Override
   protected void _update() {
-    if (isBtnClicked("Get scanny")) {
+    if (isClicked("Get scanny")) {
       r.sfx.scan.play(0);
-    } else if (isBtnClicked("Go to sleep")) {
+    } else if (isClicked("Go to sleep")) {
       App.println("zzzzzz");
-    } else if (isBtnClicked("Go back into hallway")) {
+    } else if (isClicked("Go back into hallway")) {
       setExploration(new MedicalHallway(a));
     }
   }
@@ -23,7 +23,7 @@ public class Medical extends Exploration {
   protected void _setup() {
     bg = p.loadImage("options/medical.png");
 
-    btns =
+    clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Get scanny", 800, 675),
         new ExplorationBtn(a, "Go to sleep", 200, 862),
