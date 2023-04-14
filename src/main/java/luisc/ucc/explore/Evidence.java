@@ -10,7 +10,7 @@ public class Evidence extends Clickable {
   EvidenceDialogue dialogue = null;
   public boolean doingDialogue = false;
 
-  public Evidence(App app, String text, String identifier, int x, int y) {
+  public Evidence(App app, String identifier, int x, int y, String... text) {
     super(app, x, y, 50, 50);
     this.identifier = identifier;
     dialogue = new EvidenceDialogue(app, text);
@@ -42,9 +42,9 @@ public class Evidence extends Clickable {
 
   public class EvidenceDialogue extends Dialogue {
 
-    String text;
+    String[] text;
 
-    public EvidenceDialogue(App app, String text) {
+    public EvidenceDialogue(App app, String... text) {
       super(app);
       this.text = text;
       this.skipDialogue = false;
@@ -53,7 +53,10 @@ public class Evidence extends Clickable {
     @Override
     protected void _setup() {
       bg = r.i.transparent;
-      add(text);
+
+      for (String r : this.text) {
+        add(r);
+      }
 
       add("MC/", r.ch.mc);
     }

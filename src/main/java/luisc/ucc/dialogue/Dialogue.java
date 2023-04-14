@@ -126,21 +126,14 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void preUpdate() {
-      if (!skipDialogue) {
-        if (clicked) {
-          done = true;
-        }
-
-        super.preUpdate();
-        return;
-      }
-
       if (
         currentCharacter >= text.get(currentText).text.length() &&
         (currentText + 1) >= text.size()
       ) {
-        done = true;
-        shouldCheck = false;
+        if (skipDialogue) {
+          done = true;
+          shouldCheck = false;
+        }
 
         super.preUpdate();
         return;
@@ -150,7 +143,9 @@ public abstract class Dialogue extends Obj {
         currentCharacter < text.get(currentText).text.length() ||
         (currentText + 1) >= text.size()
       ) {
-        shouldCheck = false;
+        if (skipDialogue) {
+          shouldCheck = false;
+        }
       } else {
         shouldCheck = true;
       }
@@ -177,7 +172,7 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void onClick() {
-      if (!skipDialogue) {
+      if (!skipDialogue && currentText >= text.size() - 1) {
         done = true;
         return;
       }

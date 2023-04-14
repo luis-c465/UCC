@@ -12,6 +12,8 @@ public class CafeteriaExploration extends Exploration {
   protected void _update() {
     if (isClicked("Go into right hallway")) {
       setExploration(new MedicalHallway(a));
+    } else if (isClicked("Go into left hallway")) {
+      setExploration(new ElectricalHallway(a));
     }
   }
 

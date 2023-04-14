@@ -25,27 +25,27 @@ public class Electrical extends Exploration {
         new ExplorationBtn(a, "Go back outside", 800, 800),
         new Evidence(
           a,
-          "MC: The communications panel is malfunctioning, thats a bit sus",
           "Wifi",
           260,
-          352
+          352,
+          "MC: The communications panel is malfunctioning, thats a bit sus"
         ),
         new Evidence(
           a,
-          "MC: Who did a little trolling here",
           "wires",
           374,
-          517
+          517,
+          "MC: Who did a little trolling here"
         ),
-        new Evidence(a, "MC: Why are the wires cut?", "wires", 813, 628),
+        new Evidence(a, "wires", 813, 628, "MC: Why are the wires cut?"),
         new Evidence(
           a,
-          "MC: Grease on the vents, interesting",
           "vent",
           244,
-          539
+          539,
+          "MC: Grease on the vents, interesting"
         ),
-        new Evidence(a, "MC: Why is this open", "electricity", 950, 450),
+        new Evidence(a, "electricity", 950, 450, "MC: Why is this open?"),
       };
   }
 }
