@@ -1,5 +1,6 @@
 package luisc.ucc.explore;
 
+import gifAnimation.Gif;
 import luisc.ucc.App;
 
 public class Security extends Exploration {
@@ -17,7 +18,9 @@ public class Security extends Exploration {
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/security.png");
+    Gif temp = new Gif(a, "options/security.gif");
+    temp.play();
+    bg = temp;
 
     clickables =
       new ExplorationBtn[] {
