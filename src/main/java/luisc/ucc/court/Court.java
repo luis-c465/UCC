@@ -8,7 +8,7 @@ import luisc.ucc.dialogue.StartDialogue;
 
 public class Court extends Obj {
 
-  public static final int TICKS_TO_SWITCH = 10;
+  public static final int TICKS_TO_SWITCH = 15;
 
   /**
    * Count of the number of skill issues by the player

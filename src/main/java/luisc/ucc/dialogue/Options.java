@@ -41,11 +41,11 @@ public abstract class Options extends ClickableHolder {
       this.txt = txt;
       this.identifier = txt;
 
-      this.h = 40;
+      this.h = 30;
       this.w = Dialogue.txtBoxW - (Dialogue.txtBoxPadding * 2);
 
       this.x = App.cw;
-      this.y = Dialogue.txtY + Dialogue.txtBoxPadding * 4 + (i * (h + gap));
+      this.y = Dialogue.txtY + Dialogue.txtBoxPadding * 3 + (i * (h + gap));
 
       setup();
     }

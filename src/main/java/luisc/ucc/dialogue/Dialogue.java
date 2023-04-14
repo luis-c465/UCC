@@ -8,6 +8,7 @@ import luisc.lib.KeyboardBtn;
 import luisc.lib.Obj;
 import luisc.lib.PC;
 import luisc.ucc.App;
+import luisc.ucc.scene.MainScene;
 import processing.core.PImage;
 
 /**
@@ -190,6 +191,8 @@ public abstract class Dialogue extends Obj {
       }
 
       if (almostDone) {
+        a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
+
         done = true;
         onDone();
         return;
