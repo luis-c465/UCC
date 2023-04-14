@@ -17,7 +17,7 @@ public final class App extends BaseApp {
 
   public static final boolean loadSaves = false;
 
-  public Scenes scene = Scenes.StartUp;
+  public Scenes scene = Scenes.Main;
 
   public MainScene mainScene;
 

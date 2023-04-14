@@ -38,10 +38,12 @@ public abstract class Dialogue extends Obj {
   public int currentCharacter = 0;
 
   public boolean done = false;
+  public boolean almostDone = false;
 
   @Override
   protected void preSetup() {
     textBoxBtn = new TextBoxBtn(a);
+    bg = r.i.transparent;
   }
 
   @Override
@@ -129,13 +131,18 @@ public abstract class Dialogue extends Obj {
 
     @Override
     protected void preUpdate() {
+      if (almostDone) {
+        super.preUpdate();
+        return;
+      }
+
       if (
         currentCharacter >= text.get(currentText).text.length() &&
         (currentText + 1) >= text.size()
       ) {
         if (skipDialogue) {
-          done = true;
-          shouldCheck = false;
+          almostDone = true;
+          shouldCheck = true;
         }
 
         super.preUpdate();
@@ -176,6 +183,11 @@ public abstract class Dialogue extends Obj {
     @Override
     protected void onClick() {
       if (!skipDialogue && currentText >= text.size() - 1) {
+        done = true;
+        return;
+      }
+
+      if (almostDone) {
         done = true;
         return;
       }
