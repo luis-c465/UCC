@@ -30,6 +30,22 @@ public class Electrical extends Exploration {
           260,
           352
         ),
+        new Evidence(
+          a,
+          "MC: Who did a little trolling here",
+          "wires",
+          374,
+          517
+        ),
+        new Evidence(a, "MC: Why are the wires cut?", "wires", 813, 628),
+        new Evidence(
+          a,
+          "MC: Grease on the vents, interesting",
+          "vent",
+          244,
+          539
+        ),
+        new Evidence(a, "MC: Why is this open", "electricity", 950, 450),
       };
   }
 }

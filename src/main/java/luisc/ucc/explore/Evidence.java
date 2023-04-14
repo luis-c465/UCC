@@ -37,6 +37,7 @@ public class Evidence extends Clickable {
 
     this.shouldCheck = false;
     this.doingDialogue = true;
+    r.sfx.vine.play(0);
   }
 
   public class EvidenceDialogue extends Dialogue {
