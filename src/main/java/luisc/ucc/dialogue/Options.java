@@ -61,4 +61,12 @@ public abstract class Options extends ClickableHolder {
       hasIcon = false;
     }
   }
+
+  protected void setDialogue(Dialogue dia) {
+    a.mainScene.court.setDialogue(dia);
+  }
+
+  protected void setOptions(Options opts) {
+    a.mainScene.court.setOptions(opts);
+  }
 }

@@ -1,6 +1,7 @@
 package luisc.ucc.court;
 
 import luisc.ucc.App;
+import luisc.ucc.dialogue.Gunner;
 import luisc.ucc.dialogue.Medic;
 import luisc.ucc.dialogue.Options;
 
@@ -22,7 +23,9 @@ public class StartOptions extends Options {
   @Override
   protected void _update() {
     if (isClicked("Ask medic tf2 man")) {
-      a.mainScene.court.setDialogue(new Medic(a));
+      setDialogue(new Medic(a));
+    } else if (isClicked("Ask gunner where he was")) {
+      setDialogue(new Gunner(a));
     }
   }
 }

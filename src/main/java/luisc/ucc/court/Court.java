@@ -4,8 +4,16 @@ import luisc.lib.Obj;
 import luisc.ucc.App;
 import luisc.ucc.dialogue.Dialogue;
 import luisc.ucc.dialogue.Options;
+import luisc.ucc.dialogue.StartDialogue;
+import luisc.ucc.scene.MainScene;
 
 public class Court extends Obj {
+
+  /**
+   * Count of the number of skill issues by the player
+   */
+  public int fuckUps = 0;
+  public static final int maxFuckUps = 5;
 
   public Options options;
   public Dialogue dialogue;
@@ -25,6 +33,10 @@ public class Court extends Obj {
 
   @Override
   protected void _update() {
+    if (a.mainScene.ticksSwitched > 0) {
+      a.mainScene.ticksSwitched--;
+    }
+
     if (dialogue.done) {
       options.update();
     } else {
@@ -33,7 +45,22 @@ public class Court extends Obj {
   }
 
   public void setDialogue(Dialogue dia) {
+    if (a.mainScene.ticksSwitched != 0) {
+      return;
+    }
+
     dialogue = dia;
     dia.setup();
+    a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
+  }
+
+  public void setOptions(Options opts) {
+    if (a.mainScene.ticksSwitched != 0) {
+      return;
+    }
+
+    options = opts;
+    opts.setup();
+    a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
   }
 }

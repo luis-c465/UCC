@@ -184,11 +184,14 @@ public abstract class Dialogue extends Obj {
     protected void onClick() {
       if (!skipDialogue && currentText >= text.size() - 1) {
         done = true;
+        onDone();
+
         return;
       }
 
       if (almostDone) {
         done = true;
+        onDone();
         return;
       }
 
@@ -196,6 +199,11 @@ public abstract class Dialogue extends Obj {
       currentText++;
     }
   }
+
+  /**
+   * Override this method to do something when the dialogue is done
+   */
+  public void onDone() {}
 
   public Dialogue(App app) {
     super(app);

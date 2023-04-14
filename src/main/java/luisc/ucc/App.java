@@ -98,4 +98,8 @@ public final class App extends BaseApp {
       return;
     }
   }
+
+  public boolean hasEvidence(String s) {
+    return evidence.contains(s);
+  }
 }

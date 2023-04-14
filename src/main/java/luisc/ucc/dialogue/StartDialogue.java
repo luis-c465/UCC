@@ -1,7 +1,6 @@
-package luisc.ucc.court;
+package luisc.ucc.dialogue;
 
 import luisc.ucc.App;
-import luisc.ucc.dialogue.Dialogue;
 
 public class StartDialogue extends Dialogue {
 
