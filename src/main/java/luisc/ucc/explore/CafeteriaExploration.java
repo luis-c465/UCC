@@ -10,9 +10,9 @@ public class CafeteriaExploration extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Go into right hallway")) {
-      setExploration(new MedicalHallway(a));
-    } else if (isClicked("Go into left hallway")) {
+    if (isClicked("Enter medical")) {
+      setExploration(new Medical(a));
+    } else if (isClicked("")) {
       setExploration(new ElectricalHallway(a));
     } else if (isClicked("Start court case")) {
       a.mainScene.inCourt = true;
@@ -21,13 +21,12 @@ public class CafeteriaExploration extends Exploration {
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/cafeteria.png");
+    bg = loadGif("options/cafeteria.gif");
 
     clickables =
       new ExplorationBtn[] {
-        new ExplorationBtn(a, "Go into left hallway", 200, 550),
-        new ExplorationBtn(a, "Go into right hallway", 800, 615),
-        new ExplorationBtn(a, "Start court case", 485, 900),
+        new ExplorationBtn(a, "Start court case", 300, 317),
+        new ExplorationBtn(a, "Enter medical", 300, 236),
       };
   }
 }

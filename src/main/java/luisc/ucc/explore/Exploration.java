@@ -1,5 +1,6 @@
 package luisc.ucc.explore;
 
+import gifAnimation.Gif;
 import luisc.lib.ClickableHolder;
 import luisc.ucc.App;
 import luisc.ucc.scene.MainScene;
@@ -45,6 +46,15 @@ public class Exploration extends ClickableHolder {
     exploration.setup();
 
     a.mainScene.ticksSwitched = MainScene.TICKS_TO_SWITCH;
+  }
+
+  /**
+   * Loads a gif and plays it
+   */
+  public PImage loadGif(String path) {
+    Gif temp = new Gif(a, path);
+    temp.play();
+    return temp;
   }
 
   public Exploration(App app) {
