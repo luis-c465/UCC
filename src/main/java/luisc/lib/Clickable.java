@@ -119,7 +119,7 @@ public abstract class Clickable extends Obj {
   }
 
   protected boolean shouldClick() {
-    return !a.transitioning;
+    return !a.transitioning && !a.modalShowing;
   }
 
   /**

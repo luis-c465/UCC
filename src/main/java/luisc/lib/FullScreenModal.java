@@ -26,8 +26,11 @@ public abstract class FullScreenModal extends Obj {
   @Override
   protected void _update() {
     if (!show && !this.beginShowing) {
+      a.modalShowing = false;
       return;
     }
+
+    a.modalShowing = true;
 
     checkEsc();
     display();

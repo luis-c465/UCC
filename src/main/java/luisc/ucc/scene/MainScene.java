@@ -5,6 +5,7 @@ import luisc.ucc.App;
 import luisc.ucc.court.Court;
 import luisc.ucc.explore.CafeteriaExploration;
 import luisc.ucc.explore.Exploration;
+import luisc.ucc.explore.Map;
 
 /**
  * Main scene class which well, plays the game
@@ -18,6 +19,7 @@ public class MainScene extends Obj {
 
   public Exploration exploration;
   public Court court;
+  public Map map;
 
   @Override
   protected void _setup() {
@@ -26,6 +28,9 @@ public class MainScene extends Obj {
 
     court = new Court(a);
     court.setup();
+
+    map = new Map(a);
+    map.setup();
   }
 
   @Override
@@ -35,6 +40,8 @@ public class MainScene extends Obj {
     } else {
       exploration.update();
     }
+
+    map.update();
   }
 
   public MainScene(App a) {

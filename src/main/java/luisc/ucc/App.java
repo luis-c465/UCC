@@ -3,7 +3,6 @@ package luisc.ucc;
 import java.util.HashSet;
 import java.util.Set;
 import luisc.lib.BaseApp;
-import luisc.lib.HelpModal;
 import luisc.ucc.data.Saver;
 import luisc.ucc.scene.MainScene;
 import luisc.ucc.scene.Scenes;
@@ -14,6 +13,8 @@ import processing.event.MouseEvent;
  * Main class for the application
  */
 public final class App extends BaseApp {
+
+  public boolean modalShowing;
 
   public static final boolean loadSaves = false;
 
@@ -27,7 +28,6 @@ public final class App extends BaseApp {
 
   // Game classes
   public StartUp startUp;
-  public HelpModal helpModal;
 
   // Data values
   public int test;
@@ -53,9 +53,6 @@ public final class App extends BaseApp {
       case Main:
         mainScene.update();
         break;
-      case HelpModal:
-        helpModal.update();
-        break;
       case DLC:
         break;
       case Extras:
@@ -79,9 +76,6 @@ public final class App extends BaseApp {
     startUp = new StartUp(this);
     startUp.setup();
 
-    helpModal = new HelpModal(this);
-    helpModal.setup();
-
     mainScene = new MainScene(this);
     mainScene.setup();
   }
@@ -92,8 +86,8 @@ public final class App extends BaseApp {
   }
 
   public void mouseClicked(MouseEvent e) {
-    if (helpModal.show) {
-      helpModal.mouseClicked();
+    if (mainScene.map.show) {
+      mainScene.map.mouseClicked();
       return;
     }
   }

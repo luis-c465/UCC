@@ -16,7 +16,7 @@ public class HelpBtn extends Btn {
 
   @Override
   protected void onClick() {
-    a.helpModal.beginShowing = true;
+    // a.helpModal.beginShowing = true;
   }
 
   public HelpBtn(App a) {
