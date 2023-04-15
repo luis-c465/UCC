@@ -17,7 +17,7 @@ public final class App extends BaseApp {
 
   public static final boolean loadSaves = false;
 
-  public Scenes scene = Scenes.Main;
+  public Scenes scene = Scenes.StartUp;
 
   public MainScene mainScene;
 
@@ -30,7 +30,7 @@ public final class App extends BaseApp {
   public HelpModal helpModal;
 
   // Data values
-  public int test = Integer.MIN_VALUE;
+  public int test;
   public Set<String> evidence = new HashSet<>();
 
   @Override
@@ -74,7 +74,6 @@ public final class App extends BaseApp {
     // Loading saves takes a long time for debugging purposes
     if (loadSaves) {
       saver = new Saver(this);
-      saver.load();
     }
 
     startUp = new StartUp(this);

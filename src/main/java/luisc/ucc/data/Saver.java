@@ -27,15 +27,12 @@ public class Saver {
   public Saver(App a) {
     this.a = a;
 
+    // Save the game when the app is closed
+    a.registerMethod("dispose", this);
+
+    x.processAnnotations(Data.class);
     x.addPermission(AnyTypePermission.ANY);
-    x.allowTypesByWildcard(
-      new String[] {
-        "luisc.ucc.**",
-        "luisc.lib.**",
-        "luisc.resources.**",
-        "luisc.**",
-      }
-    );
+    x.allowTypesByRegExp(new String[] { ".*" });
 
     String folder = System.getProperty("user.home");
     folder += File.separator + ".luisc.sussy-justice";
@@ -55,6 +52,8 @@ public class Saver {
     if (saves.size() == 0) {
       saves.add(new Data());
     }
+
+    load();
   }
 
   /**
@@ -75,7 +74,9 @@ public class Saver {
    * Save the current game state to the save at index i
    */
   public void save(int i) {
-    saves.get(i).save(a);
+    Data temp = saves.get(i);
+    temp.save(a);
+    saves.set(i, temp);
   }
 
   /**
@@ -83,5 +84,9 @@ public class Saver {
    */
   public void save() {
     save(saveIndex);
+  }
+
+  public void dispose() {
+    save();
   }
 }
