@@ -1,10 +1,14 @@
 package luisc.ucc.dialogue;
 
+import ddf.minim.AudioPlayer;
+
 public class Text {
 
   public String character = "";
   public String emotion = "";
   public String text = "";
+
+  public AudioPlayer sound = null;
 
   public Text(String character, String emotion, String text) {
     this.character = character;
@@ -25,6 +29,11 @@ public class Text {
     this.emotion = first.length > 1 ? first[1] : "";
 
     this.text = parts[1];
+  }
+
+  public Text(String all, AudioPlayer sfx) {
+    this(all);
+    this.sound = sfx;
   }
 
   public String toString() {

@@ -1,5 +1,6 @@
 package luisc.ucc.dialogue;
 
+import ddf.minim.AudioPlayer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -116,6 +117,15 @@ public abstract class Dialogue extends Obj {
   }
 
   /**
+   * Adds a new text to the dialogue
+   *
+   * @param dialogue The text to add
+   */
+  public void add(String dialogue, AudioPlayer soundOnText) {
+    text.add(new Text(dialogue, soundOnText));
+  }
+
+  /**
    * Adds a new characters and their images to the dialogue
    *
    */
@@ -205,6 +215,11 @@ public abstract class Dialogue extends Obj {
 
       currentCharacter = 0;
       currentText++;
+
+      Text temp = text.get(currentText);
+      if (temp.sound != null) {
+        temp.sound.play(0);
+      }
     }
   }
 
