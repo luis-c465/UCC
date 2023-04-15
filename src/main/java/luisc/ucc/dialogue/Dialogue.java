@@ -52,6 +52,13 @@ public abstract class Dialogue extends Obj {
   protected void postSetup() {
     // Go through all values in the characters map and resize them
     add("/", r.i.transparent);
+    add("mc", r.ch.mc);
+    add("mc/crying", r.ch.mcCrying);
+    add("mc/ligma", r.ch.mcLigma);
+    add("mc/pointing", r.ch.mcPointing);
+    add("mc/thinking", r.ch.mcThinking);
+    add("mc/thumbs-up", r.ch.mcThumbsUp);
+    add("mc/worried", r.ch.mcWorried);
 
     for (Map.Entry<String, PImage> entry : characters.entrySet()) {
       PImage img = entry.getValue();

@@ -37,7 +37,7 @@ public class Exploration extends ClickableHolder {
    * Will not be set if the exploration was changed in the last couple frames
    * I.E. there is a cool down between changing scenes
    */
-  protected void setExploration(Exploration exploration) {
+  public void setExploration(Exploration exploration) {
     if (a.mainScene.ticksSwitched != 0) {
       return;
     }
