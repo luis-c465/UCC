@@ -36,7 +36,8 @@ public class AmmoSalvo extends Dialogue {
 
       add("MC: Uh, well I uhm. I uh-");
       add("Gunner: Well!. What's your answer?!");
-      add("MC: Good question, why did I even say that");
+      add("MC: Good question");
+      add("[Why did I even say that?]");
 
       a.mainScene.court.fuckUps += 2;
     }

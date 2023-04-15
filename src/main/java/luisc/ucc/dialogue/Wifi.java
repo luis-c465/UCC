@@ -20,7 +20,7 @@ public class Wifi extends Dialogue {
       add("MC: I think you're hiding something, Green.");
 
       add(
-        "Gunner: Dude,  have no idea what that panel is for. I just shoot asteroids."
+        "Gunner: I have no idea what that panel is for sonny. I just shoot things."
       );
       add("MC: I'm not buying it but oh well.");
 
@@ -33,7 +33,7 @@ public class Wifi extends Dialogue {
       add("MC: I really dont know, I think the screen was broken");
       add("Gunner: 'I think'?");
       add(
-        "Gunner: Aren't you the detective here. Shouldn't you have more evidence before jumping to conclusions?"
+        "Gunner: Aren't you the detective here sonny. Shouldn't you have more evidence before leaping to conclusions?"
       );
 
       add("MC: Yeah probably");
