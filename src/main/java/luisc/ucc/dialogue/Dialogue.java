@@ -73,6 +73,11 @@ public abstract class Dialogue extends Obj {
     Text t = text.get(currentText);
     PImage img = characters.get(t.getIdentifier());
 
+    if (img == null) {
+      img = r.i.transparent;
+      App.println("The character " + t.getIdentifier() + " does not exist");
+    }
+
     p.imageMode(PC.CORNER);
     p.image(r.i.textBox, txtBoxX, txtBoxY, txtBoxW, txtBoxH);
     p.image(img, 50, 300);
@@ -214,6 +219,10 @@ public abstract class Dialogue extends Obj {
 
   protected void setOptions(Options opts) {
     a.mainScene.court.setOptions(opts);
+  }
+
+  protected boolean hasEvidence(String evidence) {
+    return a.hasEvidence(evidence);
   }
 
   public Dialogue(App app) {
