@@ -38,16 +38,28 @@ public class Map extends FullScreenModal {
     super._update();
     if (isClicked("Cafeteria")) {
       a.mainScene.exploration.setExploration(new CafeteriaExploration(a));
+      show = false;
+      beginShowing = false;
     } else if (isClicked("Medical")) {
       a.mainScene.exploration.setExploration(new Medical(a));
+      show = false;
+      beginShowing = false;
     } else if (isClicked("Security")) {
       a.mainScene.exploration.setExploration(new Security(a));
+      show = false;
+      beginShowing = false;
     } else if (isClicked("Electrical")) {
       a.mainScene.exploration.setExploration(new Electrical(a));
+      show = false;
+      beginShowing = false;
     } else if (isClicked("Coms")) {
       a.mainScene.exploration.setExploration(new Coms(a));
+      show = false;
+      beginShowing = false;
     } else if (isClicked("Weapons")) {
       a.mainScene.exploration.setExploration(new Weapons(a));
+      show = false;
+      beginShowing = false;
     }
 
     if (!show) return;
@@ -64,6 +76,11 @@ public class Map extends FullScreenModal {
     }
 
     super.postUpdate();
+  }
+
+  @Override
+  public void mouseClicked() {
+    // do nothing
   }
 
   /**
@@ -95,6 +112,13 @@ public class Map extends FullScreenModal {
       this.identifier = identifier;
 
       setup();
+    }
+
+    @Override
+    protected void postUpdate() {
+      shouldUpdate = show;
+
+      super.postUpdate();
     }
 
     @Override
