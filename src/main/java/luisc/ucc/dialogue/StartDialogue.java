@@ -10,8 +10,6 @@ public class StartDialogue extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-
     add(
       "MC: Alright, first things first, where was everyone located before the murder?"
     );

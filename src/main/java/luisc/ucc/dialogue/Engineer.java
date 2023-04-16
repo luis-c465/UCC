@@ -11,9 +11,6 @@ public class Engineer extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-    add("Engineer/", r.ch.mc);
-
     add("Engineer: Greasing up the engines");
     add("Engineer: Top engine specifically");
 

@@ -11,10 +11,6 @@ public class Blood extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("Gunner/", r.ch.gunner);
-    add("MC/", r.ch.mc);
-    add("Navigator/", r.ch.mc);
-
     if (a.hasEvidence("blood-examiner")) {
       add("MC: Odd that it belonged to the victim.");
       add("Gunner: I have no clue about that, youngster.");

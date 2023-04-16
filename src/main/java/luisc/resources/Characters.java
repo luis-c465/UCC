@@ -32,15 +32,14 @@ public class Characters extends ResourceHolder<PImage> {
   public PImage gunnerWorried;
   public PImage gunnerPointing;
 
-  public PImage medical;
-  public PImage medicalCrying;
-  public PImage medicalLigma;
-  public PImage medicalThinking;
-  public PImage medicalThumbsUp;
-  public PImage medicalWorried;
-  public PImage medicalPointing;
-
   public PImage medic;
+  public PImage medicCrying;
+  public PImage medicLigma;
+  public PImage medicThinking;
+  public PImage medicThumbsUp;
+  public PImage medicWorried;
+  public PImage medicPointing;
+
   public PImage navigator;
   public PImage communicator;
 
@@ -69,13 +68,13 @@ public class Characters extends ResourceHolder<PImage> {
     gunnerWorried = p.loadImage("gunner/worried.png");
     gunnerPointing = p.loadImage("gunner/pointing.png");
 
-    gunner = p.loadImage("medical/default.png");
-    medicalCrying = p.loadImage("medical/crying.png");
-    medicalLigma = p.loadImage("medical/ligma.png");
-    medicalThinking = p.loadImage("medical/thinking.png");
-    medicalThumbsUp = p.loadImage("medical/thumbs-up.png");
-    medicalWorried = p.loadImage("medical/worried.png");
-    medicalPointing = p.loadImage("medical/pointing.png");
+    medic = p.loadImage("medical/default.png");
+    medicCrying = p.loadImage("medical/crying.png");
+    medicLigma = p.loadImage("medical/ligma.png");
+    medicThinking = p.loadImage("medical/thinking.png");
+    medicThumbsUp = p.loadImage("medical/thumbs-up.png");
+    medicWorried = p.loadImage("medical/worried.png");
+    medicPointing = p.loadImage("medical/pointing.png");
 
     Gif temp = new Gif(p, "lta.gif");
     temp.play();

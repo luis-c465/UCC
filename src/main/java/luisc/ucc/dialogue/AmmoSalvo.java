@@ -11,9 +11,6 @@ public class AmmoSalvo extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-    add("Gunner/", r.ch.gunner);
-
     if (a.hasEvidence("ammo salvo")) {
       add(
         "MC: Were you really using the lazer gun? Or off looking for someone..."

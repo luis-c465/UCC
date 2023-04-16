@@ -11,9 +11,6 @@ public class Navigator extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-    add("Navigator/", r.ch.mc);
-
     add(
       "Navigator: I was in the cockpit, trying to put us on a quicker route."
     );

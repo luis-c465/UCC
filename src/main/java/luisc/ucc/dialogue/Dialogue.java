@@ -21,7 +21,10 @@ public abstract class Dialogue extends Obj {
 
   private static final int charStep = 5;
   private static final int textSize = 25;
+
   public static final int characterWidth = 250;
+  public static final int characterHeight = 250;
+
   public static final int txtBoxH = 300;
   public static final int txtBoxW = 800;
   public static final int txtBoxY = 700 - 50;
@@ -52,24 +55,46 @@ public abstract class Dialogue extends Obj {
   protected void postSetup() {
     // Go through all values in the characters map and resize them
     add("/", r.i.transparent);
-    add("mc", r.ch.mc);
-    add("mc/crying", r.ch.mcCrying);
-    add("mc/ligma", r.ch.mcLigma);
-    add("mc/pointing", r.ch.mcPointing);
-    add("mc/thinking", r.ch.mcThinking);
-    add("mc/thumbs-up", r.ch.mcThumbsUp);
-    add("mc/worried", r.ch.mcWorried);
 
-    add("engineer", r.ch.engineer);
-    add("engineer/crying", r.ch.engineerCrying);
-    add("engineer/ligma", r.ch.engineerLigma);
-    add("engineer/thinking", r.ch.engineerThinking);
-    add("engineer/thumbs-up", r.ch.engineerThumbsUp);
-    add("engineer/worried", r.ch.engineerWorried);
+    add("MC/", r.ch.mc);
+    add("MC/crying", r.ch.mcCrying);
+    add("MC/ligma", r.ch.mcLigma);
+    add("MC/thinking", r.ch.mcThinking);
+    add("MC/thumbs-up", r.ch.mcThumbsUp);
+    add("MC/worried", r.ch.mcWorried);
+    add("MC/pointing", r.ch.mcPointing);
+
+    add("Engineer/", r.ch.engineer);
+    add("Engineer/crying", r.ch.engineerCrying);
+    add("Engineer/ligma", r.ch.engineerLigma);
+    add("Engineer/thinking", r.ch.engineerThinking);
+    add("Engineer/thumbs-up", r.ch.engineerThumbsUp);
+    add("Engineer/worried", r.ch.engineerWorried);
+
+    add("Gunner/", r.ch.gunner);
+    add("Gunner/crying", r.ch.gunnerCrying);
+    add("Gunner/ligma", r.ch.gunnerLigma);
+    add("Gunner/thinking", r.ch.gunnerThinking);
+    add("Gunner/thumbs-up", r.ch.gunnerThumbsUp);
+    add("Gunner/worried", r.ch.gunnerWorried);
+    add("Gunner/pointing", r.ch.gunnerPointing);
+
+    add("Medic/", r.ch.medic);
+    add("Medic/crying", r.ch.medicCrying);
+    add("Medic/ligma", r.ch.medicLigma);
+    add("Medic/thinking", r.ch.medicThinking);
+    add("Medic/thumbs-up", r.ch.medicThumbsUp);
+    add("Medic/worried", r.ch.medicWorried);
+    add("Medic/pointing", r.ch.medicPointing);
+
+    add("Navigator/", r.ch.navigator);
+
+    add("Communicator/", r.ch.communicator);
+    add("Communicator/ltg", r.ch.lta);
 
     for (Map.Entry<String, PImage> entry : characters.entrySet()) {
       PImage img = entry.getValue();
-      img.resize(characterWidth, 0);
+      img.resize(0, characterHeight);
     }
   }
 

@@ -57,8 +57,6 @@ public class Evidence extends Clickable {
       for (String r : this.text) {
         add(r);
       }
-
-      add("MC/", r.ch.mc);
     }
   }
 }

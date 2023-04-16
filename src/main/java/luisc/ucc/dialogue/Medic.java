@@ -10,9 +10,6 @@ public class Medic extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("Medic/", r.ch.medic);
-    add("MC/", r.ch.mc);
-
     add("Medic: I was watching you sleep in the medical bay.");
     add("MC: You're weird. I'n not sure I like you.");
     add("MC: I'm VERy suspicious of you, Red.");

@@ -14,11 +14,6 @@ public class Communicator extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-    add("Communicator/", r.ch.mc);
-    add("Engineer/", r.ch.engineer);
-    add("Engineer/ltg", r.ch.engineer);
-
     add(
       "Communicator: I was honestly just sleeping with the radio in my ears listening to my sus male grindset compilation videos in comms."
     );

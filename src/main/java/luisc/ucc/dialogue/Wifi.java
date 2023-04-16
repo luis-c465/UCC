@@ -11,9 +11,6 @@ public class Wifi extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("MC/", r.ch.mc);
-    add("Gunner/", r.ch.gunner);
-
     if (a.hasEvidence("wifi")) {
       add("MC: Bit strange, don't you think?");
       add("MC: Cutting off means of communication? Or a simple mishap?");
