@@ -1,6 +1,5 @@
 package luisc.ucc.explore;
 
-import gifAnimation.Gif;
 import luisc.ucc.App;
 
 public class Security extends Exploration {
@@ -11,20 +10,20 @@ public class Security extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Go into hallway")) {
-      setExploration(new ReactorHallway(a));
+    if (isClicked("Go into electrical")) {
+      setExploration(new Electrical(a));
     }
   }
 
   @Override
   protected void _setup() {
-    Gif temp = new Gif(a, "options/security.gif");
-    temp.play();
-    bg = temp;
+    bg = loadGif("options/security.gif");
 
     clickables =
       new ExplorationBtn[] {
-        new ExplorationBtn(a, "Go into hallway", 500, 900),
+        new ExplorationBtn(a, "Go into electrical", 500, 900),
       };
+
+    a.evidence.add("cams");
   }
 }

@@ -12,10 +12,8 @@ public class Medical extends Exploration {
   protected void _update() {
     if (isClicked("Get scanny")) {
       r.sfx.scan.play(0);
-    } else if (isClicked("Go to sleep")) {
-      App.println("zzzzzz");
-    } else if (isClicked("Go back into hallway")) {
-      setExploration(new MedicalHallway(a));
+    } else if (isClicked("Go into security")) {
+      setExploration(new Security(a));
     }
   }
 
@@ -26,8 +24,7 @@ public class Medical extends Exploration {
     clickables =
       new ExplorationBtn[] {
         new ExplorationBtn(a, "Get scanny", 800, 675),
-        new ExplorationBtn(a, "Go to sleep", 200, 862),
-        new ExplorationBtn(a, "Go back into hallway", 500, 900),
+        new ExplorationBtn(a, "Go into security", 500, 900),
       };
   }
 }

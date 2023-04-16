@@ -10,7 +10,11 @@ public class Electrical extends Exploration {
   }
 
   @Override
-  protected void _update() {}
+  protected void _update() {
+    if (isClicked("Go into coms")) {
+      setExploration(new Coms(a));
+    }
+  }
 
   @Override
   protected void _setup() {
@@ -18,6 +22,7 @@ public class Electrical extends Exploration {
 
     clickables =
       new Clickable[] {
+        new ExplorationBtn(a, "Go into coms", 827, 950),
         new Evidence(
           a,
           "wifi",
