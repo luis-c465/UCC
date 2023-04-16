@@ -13,26 +13,26 @@ public class AmmoSalvo extends Dialogue {
   protected void _setup() {
     if (a.hasEvidence("ammo salvo")) {
       add(
-        "MC: Were you really using the lazer gun? Or off looking for someone..."
+        "MC/pointing: Were you really using the lazer gun? Or off looking for someone..."
       );
-      add("Gunner: Uh, well I uhm. I uh-");
-      add("MC: Well!. What's your answer?!");
-      add("Gunner: I didn't actually shoot any asteroids........");
+      add("Gunner/worried: Uh, well I uhm. I uh-");
+      add("MC/pointing: Well!. What's your answer?!");
+      add("Gunner/crying: I didn't actually shoot any asteroids........");
       add("[complete science]");
-      add("MC: What. Why did you say so then?");
-      add("Gunner: To sound cool, lol");
+      add("MC/worried: What. Why did you say so then?");
+      add("Gunner/ligma: To sound cool, lol");
       add("MC: *sighs*");
 
       a.mainScene.court.fuckUps++;
     } else {
       add(
-        "MC: Were you really using the lazer gun? Or off looking for someone..."
+        "MC/pointing: Were you really using the lazer gun? Or off looking for someone..."
       );
-      add("Gunner: Wait what, how did you know");
+      add("Gunner/thinking: Wait what, how did you know");
       add("Gunner: I never saw you go there");
 
-      add("MC: Uh, well I uhm. I uh-");
-      add("Gunner: Well!. What's your answer?!");
+      add("MC/worried: Uh, well I uhm. I uh-");
+      add("Gunner/pointing: Well!. What's your answer?!");
       add("MC: Good question");
       add("[Why did I even say that?]");
 

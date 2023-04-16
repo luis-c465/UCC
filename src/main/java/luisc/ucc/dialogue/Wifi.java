@@ -11,29 +11,29 @@ public class Wifi extends Dialogue {
 
   @Override
   protected void _setup() {
+    add("MC: Bit strange, don't you think?");
     if (a.hasEvidence("wifi")) {
-      add("MC: Bit strange, don't you think?");
-      add("MC: Cutting off means of communication? Or a simple mishap?");
-      add("MC: I think you're hiding something, Green.");
+      add(
+        "MC/thinking: Cutting off means of communication? Or a simple mishap?"
+      );
+      add("MC/pointing: I think you're hiding something, Green.");
 
       add(
-        "Gunner: I have no idea what that panel is for sonny. I just shoot things."
+        "Gunner/thumbs-up: I have no idea what that panel is for sonny. I just shoot things."
       );
       add("MC: I'm not buying it but oh well.");
 
       a.mainScene.court.fuckUps++;
     } else {
-      add("MC: Bit strange, don't you think?");
-
-      add("Gunner: How so?");
+      add("Gunner/thinking: How so?");
       add("[??]");
-      add("MC: I really dont know, I think the screen was broken");
-      add("Gunner: 'I think'?");
+      add("MC/crying: I really dont know, I think the screen was broken");
+      add("Gunner/worried: 'I think'?");
       add(
-        "Gunner: Aren't you the detective here sonny. Shouldn't you have more evidence before leaping to conclusions?"
+        "Gunner/worried: Aren't you the detective here sonny. Shouldn't you have more evidence before leaping to conclusions?"
       );
 
-      add("MC: Yeah probably");
+      add("MC/ligma: Yeah :(");
 
       a.mainScene.court.fuckUps += 2;
     }

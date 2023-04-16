@@ -12,7 +12,7 @@ public class Gunner extends Dialogue {
   @Override
   protected void _setup() {
     add("Gunner: Was on watch for asteroids on the laser gun.");
-    add("Gunner: Shot a couple, but ya know, it was nothing heh.");
+    add("Gunner/thumbs-up: Shot a couple, but ya know, it was nothing heh.");
 
     add("MC: Ok..., I have a couple question to ask you");
   }
