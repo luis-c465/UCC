@@ -11,6 +11,9 @@ public class AmmoSalvo extends Dialogue {
 
   @Override
   protected void _setup() {
+    add(
+      "MC/thinking: Odd that you say you shot a couple of asteroids, but the savlos are untouched"
+    );
     if (a.hasEvidence("ammo salvo")) {
       add(
         "MC/pointing: Were you really using the lazer gun? Or off looking for someone..."
@@ -20,7 +23,7 @@ public class AmmoSalvo extends Dialogue {
       add("Gunner/crying: I didn't actually shoot any asteroids........");
       add("[complete science]");
       add("MC/worried: What. Why did you say so then?");
-      add("Gunner/ligma: To sound cool, lol");
+      add("Gunner/chad: To sound cool, lol");
       add("MC: *sighs*");
 
       a.mainScene.court.fuckUps++;
@@ -33,10 +36,10 @@ public class AmmoSalvo extends Dialogue {
 
       add("MC/worried: Uh, well I uhm. I uh-");
       add("Gunner/pointing: Well!. What's your answer?!");
-      add("MC: Good question");
+      add("MC/worried: Good question");
       add("[Why did I even say that?]");
 
-      a.mainScene.court.fuckUps += 2;
+      a.mainScene.court.fuckUps++;
     }
   }
 

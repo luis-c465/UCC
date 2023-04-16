@@ -83,7 +83,9 @@ public class Communicator extends Dialogue {
       add("Communicator/ltg: YOU SHOULD KILL YOURSELF, NOW!");
 
       add("MC: Get him outta here guys!");
-      add("Communicator: This is SO not based, you’re so cringe bro.");
+      add(
+        "Communicator: This is SO not based, you guys are definitely not getting tagged in my instagram hyperborean sigma male vril edit"
+      );
       add("MC: Lmfao rip bozo rest in piss will not be missed");
       // Wins the game
     } else {

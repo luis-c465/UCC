@@ -35,7 +35,7 @@ public class Wifi extends Dialogue {
 
       add("MC/ligma: Yeah :(");
 
-      a.mainScene.court.fuckUps += 2;
+      a.mainScene.court.fuckUps++;
     }
   }
 

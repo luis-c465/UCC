@@ -14,7 +14,7 @@ public class GunnerQuestions extends Options {
       new String[] {
         "I noticed there was a lot of blood on the floor",
         "The coms pannel in weapons was broken",
-        "Odd that you say you shot a couple of asteroids, but the savlos are untouched",
+        "Ask about the ammo salvos",
         "You know what nvm",
       }
     );
@@ -26,11 +26,7 @@ public class GunnerQuestions extends Options {
       setDialogue(new Blood(a));
     } else if (isClicked("The coms pannel in weapons was broken")) {
       setDialogue(new Wifi(a));
-    } else if (
-      isClicked(
-        "Odd that you say you shot a couple of asteroids, but the savlos are untouched"
-      )
-    ) {
+    } else if (isClicked("Ask about the ammo salvos")) {
       setDialogue(new AmmoSalvo(a));
     } else if (isClicked("You know what nvm")) {
       setOptions(new StartOptions(a));
