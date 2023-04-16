@@ -60,6 +60,13 @@ public abstract class Dialogue extends Obj {
     add("mc/thumbs-up", r.ch.mcThumbsUp);
     add("mc/worried", r.ch.mcWorried);
 
+    add("engineer", r.ch.engineer);
+    add("engineer/crying", r.ch.engineerCrying);
+    add("engineer/ligma", r.ch.engineerLigma);
+    add("engineer/thinking", r.ch.engineerThinking);
+    add("engineer/thumbs-up", r.ch.engineerThumbsUp);
+    add("engineer/worried", r.ch.engineerWorried);
+
     for (Map.Entry<String, PImage> entry : characters.entrySet()) {
       PImage img = entry.getValue();
       img.resize(characterWidth, 0);
