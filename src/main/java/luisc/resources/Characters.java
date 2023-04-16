@@ -31,6 +31,7 @@ public class Characters extends ResourceHolder<PImage> {
   public PImage gunnerThumbsUp;
   public PImage gunnerWorried;
   public PImage gunnerPointing;
+  public PImage gunnerChad;
 
   public PImage medic;
   public PImage medicCrying;
@@ -40,8 +41,21 @@ public class Characters extends ResourceHolder<PImage> {
   public PImage medicWorried;
   public PImage medicPointing;
 
-  public PImage navigator;
   public PImage communicator;
+  public PImage communicatorCrying;
+  public PImage communicatorLigma;
+  public PImage communicatorThinking;
+  public PImage communicatorThumbsUp;
+  public PImage communicatorWorried;
+  public PImage communicatorPointing;
+
+  public PImage navigator;
+  public PImage navigatorCrying;
+  public PImage navigatorLigma;
+  public PImage navigatorThinking;
+  public PImage navigatorThumbsUp;
+  public PImage navigatorWorried;
+  public PImage navigatorPointing;
 
   @Override
   protected void load() {
@@ -67,6 +81,7 @@ public class Characters extends ResourceHolder<PImage> {
     gunnerThumbsUp = p.loadImage("gunner/thumbs-up.png");
     gunnerWorried = p.loadImage("gunner/worried.png");
     gunnerPointing = p.loadImage("gunner/pointing.png");
+    gunnerChad = p.loadImage("gunner/chad.png");
 
     medic = p.loadImage("medical/default.png");
     medicCrying = p.loadImage("medical/crying.png");
@@ -75,6 +90,22 @@ public class Characters extends ResourceHolder<PImage> {
     medicThumbsUp = p.loadImage("medical/thumbs-up.png");
     medicWorried = p.loadImage("medical/worried.png");
     medicPointing = p.loadImage("medical/pointing.png");
+
+    communicator = p.loadImage("communicator/default.png");
+    communicatorCrying = p.loadImage("communicator/crying.png");
+    communicatorLigma = p.loadImage("communicator/ligma.png");
+    communicatorThinking = p.loadImage("communicator/thinking.png");
+    communicatorThumbsUp = p.loadImage("communicator/thumbs-up.png");
+    communicatorWorried = p.loadImage("communicator/worried.png");
+    communicatorPointing = p.loadImage("communicator/pointing.png");
+
+    navigator = p.loadImage("navigator/default.png");
+    navigatorCrying = p.loadImage("navigator/crying.png");
+    navigatorLigma = p.loadImage("navigator/ligma.png");
+    navigatorThinking = p.loadImage("navigator/thinking.png");
+    navigatorThumbsUp = p.loadImage("navigator/thumbs-up.png");
+    navigatorWorried = p.loadImage("navigator/worried.png");
+    navigatorPointing = p.loadImage("navigator/pointing.png");
 
     Gif temp = new Gif(p, "lta.gif");
     temp.play();

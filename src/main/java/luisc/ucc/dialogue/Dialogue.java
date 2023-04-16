@@ -78,6 +78,7 @@ public abstract class Dialogue extends Obj {
     add("Gunner/thumbs-up", r.ch.gunnerThumbsUp);
     add("Gunner/worried", r.ch.gunnerWorried);
     add("Gunner/pointing", r.ch.gunnerPointing);
+    add("Gunner/chad", r.ch.gunnerChad);
 
     add("Medic/", r.ch.medic);
     add("Medic/crying", r.ch.medicCrying);
@@ -88,8 +89,20 @@ public abstract class Dialogue extends Obj {
     add("Medic/pointing", r.ch.medicPointing);
 
     add("Navigator/", r.ch.navigator);
+    add("Navigator/crying", r.ch.navigatorCrying);
+    add("Navigator/ligma", r.ch.navigatorLigma);
+    add("Navigator/thinking", r.ch.navigatorThinking);
+    add("Navigator/thumbs-up", r.ch.navigatorThumbsUp);
+    add("Navigator/worried", r.ch.navigatorWorried);
+    add("Navigator/pointing", r.ch.navigatorPointing);
 
     add("Communicator/", r.ch.communicator);
+    add("Communicator/crying", r.ch.communicatorCrying);
+    add("Communicator/ligma", r.ch.communicatorLigma);
+    add("Communicator/thinking", r.ch.communicatorThinking);
+    add("Communicator/thumbs-up", r.ch.communicatorThumbsUp);
+    add("Communicator/worried", r.ch.communicatorWorried);
+    add("Communicator/pointing", r.ch.communicatorPointing);
     add("Communicator/ltg", r.ch.lta);
 
     for (Map.Entry<String, PImage> entry : characters.entrySet()) {
