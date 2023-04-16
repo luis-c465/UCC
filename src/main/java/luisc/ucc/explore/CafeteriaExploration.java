@@ -27,7 +27,7 @@ public class CafeteriaExploration extends Exploration {
     clickables =
       new Clickable[] {
         new ExplorationBtn(a, "Enter medical", 450, 350),
-        new Intractable(a, "court case", 315, 315, 25, 25),
+        new Interactable(a, "court case", 440, 467, 40, 40),
       };
   }
 }

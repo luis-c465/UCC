@@ -116,7 +116,7 @@ public class Map extends FullScreenModal {
 
     @Override
     protected void postUpdate() {
-      shouldUpdate = show;
+      shouldCheck = show;
 
       super.postUpdate();
     }
