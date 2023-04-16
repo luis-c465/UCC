@@ -19,6 +19,6 @@ public class Gunner extends Dialogue {
 
   @Override
   public void onDone() {
-    a.mainScene.court.setOptions(new GunnerQuestions(a));
+    setOptions(new GunnerQuestions(a));
   }
 }

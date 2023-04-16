@@ -56,9 +56,9 @@ public class Court extends Obj {
   }
 
   public void setOptions(Options opts) {
-    if (a.mainScene.ticksSwitched != 0) {
-      return;
-    }
+    // if (a.mainScene.ticksSwitched != 0) {
+    //   return;
+    // }
 
     options = opts;
     opts.setup();

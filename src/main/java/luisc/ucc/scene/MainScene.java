@@ -13,6 +13,8 @@ import luisc.ucc.explore.Map;
 public class MainScene extends Obj {
 
   public static final int TICKS_TO_SWITCH = 6;
+  public int dialogueTicks = 0;
+  // public int dialogueTicks = 0;
   public int ticksSwitched = 0;
 
   public boolean inCourt = false;

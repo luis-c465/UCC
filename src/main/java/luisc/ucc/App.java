@@ -16,7 +16,7 @@ public final class App extends BaseApp {
 
   public boolean modalShowing;
 
-  public static final boolean loadSaves = false;
+  public static final boolean loadSaves = true;
 
   public Scenes scene = Scenes.Main;
 
