@@ -54,9 +54,9 @@ public class Map extends FullScreenModal {
     } else if (isClicked("Reactor")) {
       set(new Reactor(a));
     } else if (isClicked("Left Engine")) {
-      set(new LeftEngine(a));
-    } else if (isClicked("Right Engine")) {
       set(new RightEngine(a));
+    } else if (isClicked("Right Engine")) {
+      set(new LeftEngine(a));
     }
 
     if (!show) return;
