@@ -71,6 +71,7 @@ public class Map extends FullScreenModal {
     show = false;
     beginShowing = false;
     a.modalShowing = false;
+    a.key = ' ';
   }
 
   @Override
