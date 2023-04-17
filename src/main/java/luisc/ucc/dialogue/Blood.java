@@ -11,7 +11,10 @@ public class Blood extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("I noticed there was a lot of blood on the floor", "gunner/blood-1");
+    add(
+      "MC: I noticed there was a lot of blood on the floor",
+      "gunner/blood-1"
+    );
     if (a.hasEvidence("blood-examiner")) {
       add(
         "MC/pointing: Odd that it belonged to the victim.",

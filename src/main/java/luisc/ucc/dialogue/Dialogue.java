@@ -20,7 +20,7 @@ public abstract class Dialogue extends Obj {
 
   public boolean skipDialogue = true;
 
-  private static final int charStep = 5;
+  private static final int charStep = 2;
   private static final int textSize = 25;
 
   public static final int characterWidth = 250;
