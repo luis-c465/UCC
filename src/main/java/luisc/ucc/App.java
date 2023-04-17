@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import luisc.lib.BaseApp;
 import luisc.ucc.data.Saver;
+import luisc.ucc.scene.DLC;
 import luisc.ucc.scene.MainScene;
 import luisc.ucc.scene.Scenes;
 import luisc.ucc.scene.StartUp;
@@ -18,9 +19,10 @@ public final class App extends BaseApp {
 
   public static final boolean loadSaves = true;
 
-  public Scenes scene = Scenes.Main;
+  public Scenes scene = Scenes.StartUp;
 
   public MainScene mainScene;
+  public DLC dlc;
 
   public Saver saver;
 
@@ -54,6 +56,7 @@ public final class App extends BaseApp {
         mainScene.update();
         break;
       case DLC:
+        dlc.update();
         break;
       case Extras:
         break;
@@ -78,6 +81,9 @@ public final class App extends BaseApp {
 
     mainScene = new MainScene(this);
     mainScene.setup();
+
+    dlc = new DLC(this);
+    dlc.setup();
   }
 
   @Override

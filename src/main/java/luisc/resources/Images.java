@@ -20,6 +20,7 @@ public class Images extends ResourceHolder<PImage> {
   public PImage gamer;
 
   public PImage map;
+  public PImage dlc;
 
   @Override
   protected void load() {
@@ -42,6 +43,7 @@ public class Images extends ResourceHolder<PImage> {
     gamer = p.loadImage("gamer-small.png");
 
     map = p.loadImage("map.png");
+    dlc = p.loadImage("dlc.png");
   }
 
   public Images(BaseApp p) {
