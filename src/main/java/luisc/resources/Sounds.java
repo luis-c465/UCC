@@ -10,12 +10,14 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
   public AudioPlayer vine;
   public AudioPlayer ltg;
   public AudioPlayer holdIt;
+  public AudioPlayer metalPipe;
 
   @Override
   protected void load() {
     scan = p.minim.loadFile("scan.mp3");
     vine = p.minim.loadFile("vine.mp3");
     ltg = l("ltg.mp3");
+    metalPipe = l("metal-pipe.mp3");
 
     holdIt = l("hold-it.mp3");
   }

@@ -1,5 +1,6 @@
 package luisc.ucc.explore;
 
+import luisc.lib.Clickable;
 import luisc.ucc.App;
 
 public class Reactor extends Exploration {
@@ -10,18 +11,16 @@ public class Reactor extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Go into hallway")) {
-      setExploration(new ReactorHallway(a));
+    if (isClicked("buttons")) {
+      r.sfx.metalPipe.play(0);
     }
   }
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/reactor.png");
+    bg = loadGif("reactor.gif");
 
     clickables =
-      new ExplorationBtn[] {
-        new ExplorationBtn(a, "Go into hallway", 500, 900),
-      };
+      new Clickable[] { new Interactable(a, "buttons", 500, 550, 50, 50) };
   }
 }

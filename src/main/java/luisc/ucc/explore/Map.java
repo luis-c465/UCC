@@ -21,6 +21,7 @@ public class Map extends FullScreenModal {
         new MapBtn(a, "Electrical", 400, 578, 60, 60),
         new MapBtn(a, "Coms", 664, 694, 60, 60),
         new MapBtn(a, "Weapons", 782, 335, 60, 60),
+        new MapBtn(a, "Reactor", 131, 485, 60, 60),
       };
   }
 
@@ -37,29 +38,19 @@ public class Map extends FullScreenModal {
   protected void _update() {
     super._update();
     if (isClicked("Cafeteria")) {
-      a.mainScene.exploration.setExploration(new CafeteriaExploration(a));
-      show = false;
-      beginShowing = false;
+      set(new CafeteriaExploration(a));
     } else if (isClicked("Medical")) {
-      a.mainScene.exploration.setExploration(new Medical(a));
-      show = false;
-      beginShowing = false;
+      set(new Medical(a));
     } else if (isClicked("Security")) {
-      a.mainScene.exploration.setExploration(new Security(a));
-      show = false;
-      beginShowing = false;
+      set(new Security(a));
     } else if (isClicked("Electrical")) {
-      a.mainScene.exploration.setExploration(new Electrical(a));
-      show = false;
-      beginShowing = false;
+      set(new Electrical(a));
     } else if (isClicked("Coms")) {
-      a.mainScene.exploration.setExploration(new Coms(a));
-      show = false;
-      beginShowing = false;
+      set(new Coms(a));
     } else if (isClicked("Weapons")) {
-      a.mainScene.exploration.setExploration(new Weapons(a));
-      show = false;
-      beginShowing = false;
+      set(new Weapons(a));
+    } else if (isClicked("Reactor")) {
+      set(new Reactor(a));
     }
 
     if (!show) return;
@@ -67,6 +58,12 @@ public class Map extends FullScreenModal {
     p.textAlign(PC.CENTER);
     p.fill(255);
     p.text("Map screen", App.cw, 25);
+  }
+
+  protected void set(Exploration exploration) {
+    a.mainScene.exploration.setExploration(exploration);
+    show = false;
+    beginShowing = false;
   }
 
   @Override
@@ -127,6 +124,10 @@ public class Map extends FullScreenModal {
     }
 
     @Override
-    protected void _update() {}
+    protected void _update() {
+      // p.fill(255);
+      // p.rectMode(PC.CORNERS);
+      // p.rect(left, top, right, bottom);
+    }
   }
 }
