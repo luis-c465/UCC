@@ -11,10 +11,13 @@ public class Gunner extends Dialogue {
 
   @Override
   protected void _setup() {
-    add("Gunner: Was on watch for asteroids on the laser gun.");
+    add(
+      "Gunner: Was on watch for asteroids on the laser gun.",
+      "adrian/wasonwatchforasteroids"
+    );
     add("Gunner/thumbs-up: Sonny, you wouldn't believe the hellfire out");
 
-    add("MC: Ok..., I have a couple question to ask you");
+    add("MC: Ok..., I have a couple question to ask you", "gunner/start");
   }
 
   @Override

@@ -11,24 +11,36 @@ public class Blood extends Dialogue {
 
   @Override
   protected void _setup() {
+    add("I noticed there was a lot of blood on the floor", "gunner/blood-1");
     if (a.hasEvidence("blood-examiner")) {
-      add("MC/pointing: Odd that it belonged to the victim.");
-      add("Gunner: I have no clue about that, youngster.");
+      add(
+        "MC/pointing: Odd that it belonged to the victim.",
+        "gunner/examiner/victim"
+      );
+      add(
+        "Gunner: I have no clue about that, youngster.",
+        "adrian/ihavenoclueaboutthatsonny"
+      );
       add("Gunner/worried: I didn't even know they went through there!");
       add(
         "Gunner/thinking: Towards the latter end of my shift, I left to go swipe my card in admin because I forgot!"
       );
-      add("MC: Hmmm, Does anyone confirm this?");
-      add("Navigator: Uh, I-I can!");
+      add("MC: Hmmm, Does anyone confirm this?", "gunner/examiner/confirm");
+      add("Navigator: Uh, I-I can!", "adrian/navigatorGunnerDialogue");
       add("Navigator: I saw him try and scan for 5 minutes!");
-      add("Gunner/pointing: I hate this newfangled technology, ok?");
       add(
-        "MC/thumbs-up: Alright well we have an alibi and a person to scratch off the suspect list at least."
+        "Gunner/pointing: I hate this newfangled technology, ok?",
+        "adrian/ihatethisnewfangledtechnology"
+      );
+      add(
+        "MC/thumbs-up: Alright well we have an alibi and a person to scratch off the suspect list at least.",
+        "gunner/examiner/alibi"
       );
     } else if (a.hasEvidence("blood")) {
-      add("MC/thinking: Any idea where it came from?");
+      add("MC/thinking: Any idea where it came from?", "gunner/blood-1");
       add(
-        "Gunner/thumbs-up: I don’t really know. Must have been from the battles i’ve fought."
+        "Gunner/thumbs-up: I don’t really know. Must have been from the battles i’ve fought.",
+        "adrian/wife-and-kids"
       );
       add("Gunner/crying: You know, I lost my wife and kids that day.");
 

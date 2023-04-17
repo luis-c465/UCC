@@ -1,6 +1,7 @@
 package luisc.ucc.dialogue;
 
 import ddf.minim.AudioPlayer;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -175,6 +176,20 @@ public abstract class Dialogue extends Obj {
    */
   public void add(String dialogue, AudioPlayer soundOnText) {
     text.add(new Text(dialogue, soundOnText));
+  }
+
+  /**
+   * Adds a new text to the dialogue
+   *
+   * @param dialogue The text to add
+   */
+  public void add(String dialogue, String sound) {
+    text.add(
+      new Text(
+        dialogue,
+        a.minim.loadFile("voices" + File.separator + sound + ".mp3")
+      )
+    );
   }
 
   /**
