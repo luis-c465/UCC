@@ -22,6 +22,8 @@ public class Map extends FullScreenModal {
         new MapBtn(a, "Coms", 664, 694, 60, 60),
         new MapBtn(a, "Weapons", 782, 335, 60, 60),
         new MapBtn(a, "Reactor", 131, 485, 60, 60),
+        new MapBtn(a, "Left Engine", 228, 348, 60, 60),
+        new MapBtn(a, "Right Engine", 218, 605, 60, 60),
       };
   }
 
@@ -51,6 +53,10 @@ public class Map extends FullScreenModal {
       set(new Weapons(a));
     } else if (isClicked("Reactor")) {
       set(new Reactor(a));
+    } else if (isClicked("Left Engine")) {
+      set(new LeftEngine(a));
+    } else if (isClicked("Right Engine")) {
+      set(new RightEngine(a));
     }
 
     if (!show) return;
@@ -64,6 +70,7 @@ public class Map extends FullScreenModal {
     a.mainScene.exploration.setExploration(exploration);
     show = false;
     beginShowing = false;
+    a.modalShowing = false;
   }
 
   @Override

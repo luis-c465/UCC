@@ -12,15 +12,15 @@ public class Reactor extends Exploration {
   @Override
   protected void _update() {
     if (isClicked("buttons")) {
-      r.sfx.metalPipe.play(0);
+      r.sfx.reactor.play(0);
     }
   }
 
   @Override
   protected void _setup() {
-    bg = loadGif("reactor.gif");
+    bg = loadGif("options/reactor.gif");
 
     clickables =
-      new Clickable[] { new Interactable(a, "buttons", 500, 550, 50, 50) };
+      new Clickable[] { new Interactable(a, "buttons", 500, 591, 50, 50) };
   }
 }

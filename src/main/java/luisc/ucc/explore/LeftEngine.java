@@ -1,5 +1,6 @@
 package luisc.ucc.explore;
 
+import luisc.lib.Clickable;
 import luisc.ucc.App;
 
 public class LeftEngine extends Exploration {
@@ -10,21 +11,21 @@ public class LeftEngine extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Go into next hallway")) {
-      setExploration(new ReactorHallway(a));
-    } else if (isClicked("Go back into hallway")) {
-      setExploration(new MedicalHallway(a));
+    if (isClicked("button")) {
+      r.sfx.peppino.play(0);
+    } else if (isClicked("!!!")) {
+      r.sfx.metalPipe.play(0);
     }
   }
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/l-engine.jpg");
+    bg = loadGif("options/left_engine.gif");
 
     clickables =
-      new ExplorationBtn[] {
-        new ExplorationBtn(a, "Go into next hallway", 630, 200),
-        new ExplorationBtn(a, "Go back into hallway", 70, 900),
+      new Clickable[] {
+        new Interactable(a, "button", 41, 494, 50, 50),
+        new Interactable(a, "!!!", 644, 128, 50, 50),
       };
   }
 }
