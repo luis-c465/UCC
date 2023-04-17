@@ -110,9 +110,6 @@ public class Characters extends ResourceHolder<PImage> {
     Gif temp = new Gif(p, "lta.gif");
     temp.play();
     lta = temp;
-
-    navigator = p.loadImage("gamer.png");
-    communicator = p.loadImage("gamer.png");
   }
 
   public Characters(BaseApp p) {

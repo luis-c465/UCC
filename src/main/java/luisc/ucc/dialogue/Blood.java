@@ -59,7 +59,7 @@ public class Blood extends Dialogue {
       add("Gunner/ligma: But anyways, I don’t know about that one sonny.");
 
       add("MC/worried: You good man?");
-      add("Gunner/thumbs-up: Yes");
+      add("Gunner/chad: Yes");
       a.mainScene.court.fuckUps++;
     } else {
       add("Gunner/pointing: Ok where did you see it?");
