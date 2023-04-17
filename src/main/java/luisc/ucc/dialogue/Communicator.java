@@ -47,7 +47,7 @@ public class Communicator extends Dialogue {
         "Communicator: You know who else did maintenance on the vents prior to lift off..."
       );
 
-      if (!hasEvidence("comms-panel")) {
+      if (!hasEvidence("comms")) {
         add("MC: Fucking hell, not you thats for sure");
         soClose();
         return;

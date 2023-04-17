@@ -10,19 +10,21 @@ public class Weapons extends Exploration {
   }
 
   @Override
-  protected void _update() {
-    if (isClicked("vent")) {
-      r.sfx.vent.play(0);
-    }
-  }
-
-  @Override
   protected void _setup() {
     bg = loadGif("options/weapons.gif");
 
     clickables =
       new Clickable[] {
-        new Interactable(a, "vent", 356, 313, 100, 100),
+        new Evidence(
+          a,
+          "guns-blood",
+          356,
+          313,
+          100,
+          100,
+          "MC: The guns are covered in blood, and so is this vent!!!",
+          "MC: I wonder what happened here..."
+        ),
         new Evidence(
           a,
           "ammo salvo",

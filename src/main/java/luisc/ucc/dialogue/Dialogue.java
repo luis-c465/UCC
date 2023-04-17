@@ -111,9 +111,11 @@ public abstract class Dialogue extends Obj {
       img.resize(0, characterHeight);
     }
 
-    Text temp = text.get(currentText);
-    if (temp.sound != null) {
-      temp.sound.play(0);
+    if (text.size() > 0) {
+      Text temp = text.get(currentText);
+      if (temp.sound != null) {
+        temp.sound.play(0);
+      }
     }
   }
 
