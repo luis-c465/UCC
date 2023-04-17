@@ -18,7 +18,7 @@ public class Weapons extends Exploration {
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/weapons.gif");
+    bg = loadGif("options/weapons.gif");
 
     clickables =
       new Clickable[] {

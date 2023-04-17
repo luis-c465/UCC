@@ -110,6 +110,11 @@ public abstract class Dialogue extends Obj {
       PImage img = entry.getValue();
       img.resize(0, characterHeight);
     }
+
+    Text temp = text.get(currentText);
+    if (temp.sound != null) {
+      temp.sound.play(0);
+    }
   }
 
   /**
