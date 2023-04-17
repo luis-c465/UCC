@@ -14,6 +14,7 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
   public AudioPlayer peppino;
   public AudioPlayer fakePeppino;
   public AudioPlayer reactor;
+  public AudioPlayer vent;
 
   @Override
   protected void load() {
@@ -27,6 +28,7 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
     peppino = l("peppino.mp3");
     fakePeppino = l("fake-peppino.mp3");
     reactor = l("reactor.mp3");
+    vent = l("vent.mp3");
   }
 
   public AudioPlayer l(String name) {

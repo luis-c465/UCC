@@ -19,6 +19,23 @@ public class Evidence extends Clickable {
     setup();
   }
 
+  public Evidence(
+    App app,
+    String identifier,
+    int x,
+    int y,
+    int w,
+    int h,
+    String... text
+  ) {
+    super(app, x, y, w, h);
+    this.identifier = identifier;
+    dialogue = new EvidenceDialogue(app, text);
+    dialogue.setup();
+
+    setup();
+  }
+
   @Override
   protected void _update() {
     if (doingDialogue) {
