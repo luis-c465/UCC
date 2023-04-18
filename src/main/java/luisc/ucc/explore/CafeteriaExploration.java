@@ -13,9 +13,8 @@ public class CafeteriaExploration extends Exploration {
   protected void _update() {
     if (isClicked("Enter medical")) {
       setExploration(new Medical(a));
-    } else if (isClicked("")) {
-      setExploration(new ElectricalHallway(a));
     } else if (isClicked("court case")) {
+      r.sfx.emergency.play(0);
       a.mainScene.inCourt = true;
     }
   }

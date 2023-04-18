@@ -17,13 +17,16 @@ public class Wifi extends Dialogue {
         "MC/thinking: Cutting off means of communication? Or a simple mishap?",
         "gunner/wifi/coms"
       );
-      add("MC/pointing: I think you're hiding something, Green.");
+      add(
+        "MC/pointing: I think you're hiding something, Green.",
+        "gunner/wifi/hiding"
+      );
 
       add(
         "Gunner/thumbs-up: I have no idea what that panel is for sonny. I just shoot things.",
         "adrian/ihavenoideacommspanel"
       );
-      add("MC: I'm not buying it but oh well.");
+      add("MC: I'm not buying it but oh well.", "gunner/wifi/buying-it");
 
       a.mainScene.court.fuckUps++;
     } else {

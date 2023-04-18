@@ -58,13 +58,13 @@ public class Blood extends Dialogue {
       add("Gunner/ligma: I can’t sleep.");
       add("Gunner/ligma: But anyways, I don’t know about that one sonny.");
 
-      add("MC/worried: You good man?");
+      add("MC/worried: You good man?", "gunner/blood/good?");
       add("Gunner/chad: Yes");
       a.mainScene.court.fuckUps++;
     } else {
       add("Gunner/pointing: Ok where did you see it?");
       add("[Uhh why did I say that]");
-      add("MC/worried: Honestly I forgor");
+      add("MC/worried: Honestly I forgor", "gunner/blood/forgor");
       add("Gunner/worried: Bruh");
 
       a.mainScene.court.fuckUps++;
