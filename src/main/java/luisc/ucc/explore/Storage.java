@@ -1,5 +1,6 @@
 package luisc.ucc.explore;
 
+import luisc.lib.Clickable;
 import luisc.ucc.App;
 
 public class Storage extends Exploration {
@@ -10,18 +11,12 @@ public class Storage extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Go coms hallway")) {
-      setExploration(new ComsHallway(a));
-    }
+    // nothing happens here
   }
 
   @Override
   protected void _setup() {
-    bg = p.loadImage("options/storage.png");
-
-    clickables =
-      new ExplorationBtn[] {
-        new ExplorationBtn(a, "Go coms hallway", 413, 683),
-      };
+    bg = p.loadImage("storage.png");
+    clickables = new Clickable[] {};
   }
 }

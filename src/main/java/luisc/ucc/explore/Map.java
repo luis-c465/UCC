@@ -24,6 +24,7 @@ public class Map extends FullScreenModal {
         new MapBtn(a, "Reactor", 131, 485, 60, 60),
         new MapBtn(a, "Left Engine", 228, 348, 60, 60),
         new MapBtn(a, "Right Engine", 218, 605, 60, 60),
+        new MapBtn(a, "Storage", 548, 643, 100, 100),
       };
   }
 
@@ -57,6 +58,8 @@ public class Map extends FullScreenModal {
       set(new RightEngine(a));
     } else if (isClicked("Right Engine")) {
       set(new LeftEngine(a));
+    } else if (isClicked("Storage")) {
+      set(new Storage(a));
     }
 
     if (!show) return;
