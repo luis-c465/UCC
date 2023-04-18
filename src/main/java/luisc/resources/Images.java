@@ -2,6 +2,7 @@ package luisc.resources;
 
 import luisc.lib.BaseApp;
 import luisc.lib.ResourceHolder;
+import luisc.ucc.explore.Exploration;
 import processing.core.PImage;
 
 public class Images extends ResourceHolder<PImage> {
@@ -34,7 +35,7 @@ public class Images extends ResourceHolder<PImage> {
     water = p.loadImage("water.png");
 
     enter = p.loadImage("enter.png");
-    winner = p.loadImage("winner.jpeg");
+    winner = Exploration.loadGif(p, "winner.gif");
 
     textBox = p.loadImage("textBox.png");
 

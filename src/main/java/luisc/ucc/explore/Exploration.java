@@ -4,6 +4,7 @@ import gifAnimation.Gif;
 import luisc.lib.ClickableHolder;
 import luisc.ucc.App;
 import luisc.ucc.scene.MainScene;
+import processing.core.PApplet;
 import processing.core.PImage;
 
 public class Exploration extends ClickableHolder {
@@ -52,6 +53,15 @@ public class Exploration extends ClickableHolder {
    * Loads a gif and plays it
    */
   public PImage loadGif(String path) {
+    Gif temp = new Gif(a, path);
+    temp.play();
+    return temp;
+  }
+
+  /**
+   * Loads a gif and plays it
+   */
+  public static PImage loadGif(PApplet a, String path) {
     Gif temp = new Gif(a, path);
     temp.play();
     return temp;

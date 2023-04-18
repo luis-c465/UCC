@@ -87,7 +87,7 @@ public class Communicator extends Dialogue {
         "Communicator: This is SO not based, you guys are definitely not getting tagged in my instagram hyperborean sigma male vril edit"
       );
       add("MC: Lmfao rip bozo rest in piss will not be missed");
-      // Wins the game
+      a.winner = true;
     } else {
       add("MC: Can anyone verify?");
       add("[Everyone says no]");

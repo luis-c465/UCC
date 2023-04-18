@@ -1,6 +1,7 @@
 package luisc.ucc.court;
 
 import luisc.lib.Obj;
+import luisc.lib.PC;
 import luisc.ucc.App;
 import luisc.ucc.dialogue.BeginDialogue;
 import luisc.ucc.dialogue.Dialogue;
@@ -48,6 +49,11 @@ public class Court extends Obj {
       options.update();
     } else {
       dialogue.update();
+
+      if (a.winner) {
+        p.imageMode(PC.CORNER);
+        p.image(r.i.winner, 0, 0, App.w, App.h);
+      }
     }
   }
 

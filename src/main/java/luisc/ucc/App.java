@@ -15,6 +15,7 @@ import processing.event.MouseEvent;
  */
 public final class App extends BaseApp {
 
+  public boolean winner = false;
   public boolean firstLoaded = false;
 
   public boolean modalShowing;
