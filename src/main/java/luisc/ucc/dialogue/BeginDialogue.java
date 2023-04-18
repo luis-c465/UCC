@@ -10,6 +10,8 @@ public class BeginDialogue extends Dialogue {
 
   @Override
   protected void _setup() {
+    bg = p.loadImage("options/dead.png");
+
     add(
       "MC/thumbs-up: The Skeld. A sizeable freighter, but still feels cramped. Maybe going to Mira HQ on this ship wasn't the best idea. But i'll be damned if I wasn't lucky enough to get a case to work on there."
     );

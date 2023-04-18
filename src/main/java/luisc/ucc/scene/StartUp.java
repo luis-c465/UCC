@@ -57,7 +57,7 @@ public class StartUp extends Transitionable {
     @Override
     public void _setup() {
       x = App.cw;
-      y = 600;
+      y = 550;
       w = 200;
 
       if (App.loadSaves) {

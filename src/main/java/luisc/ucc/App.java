@@ -18,7 +18,7 @@ public final class App extends BaseApp {
   public boolean winner = false;
   public boolean firstLoaded = false;
 
-  public boolean modalShowing;
+  public boolean modalShowing = false;
 
   public static final boolean loadSaves = true;
 
