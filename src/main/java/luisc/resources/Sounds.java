@@ -16,6 +16,7 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
   public AudioPlayer reactor;
   public AudioPlayer vent;
   public AudioPlayer emergency;
+  public AudioPlayer music;
 
   @Override
   protected void load() {
@@ -31,6 +32,9 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
     reactor = l("reactor.mp3");
     vent = l("vent.mp3");
     emergency = l("emergency.mp3");
+    music = l("between.mp3");
+    music.setGain(-10);
+    music.loop();
   }
 
   public AudioPlayer l(String name) {
