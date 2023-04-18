@@ -10,8 +10,10 @@ public class StartDialogue extends Dialogue {
 
   @Override
   protected void _setup() {
+    add("[... complete science]");
     add(
-      "MC: Alright, first things first, where was everyone located before the murder?"
+      "MC: Alright, first things first, where was everyone located before the murder?",
+      "before"
     );
   }
 }

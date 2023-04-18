@@ -2,7 +2,6 @@ package luisc.ucc.court;
 
 import luisc.ucc.App;
 import luisc.ucc.dialogue.Communicator;
-import luisc.ucc.dialogue.Engineer;
 import luisc.ucc.dialogue.Gunner;
 import luisc.ucc.dialogue.Medic;
 import luisc.ucc.dialogue.Navigator;
@@ -35,7 +34,7 @@ public class StartOptions extends Options {
     } else if (isClicked("Mr coms?")) {
       setDialogue(new Communicator(a));
     } else if (isClicked("Engineer gaming")) {
-      setDialogue(new Engineer(a));
+      setOptions(new EngineerQuestions(a));
     } else if (isClicked("Nvm, let me find some more evidence first")) {
       a.mainScene.inCourt = false;
     }
