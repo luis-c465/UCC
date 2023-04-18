@@ -15,6 +15,8 @@ import processing.event.MouseEvent;
  */
 public final class App extends BaseApp {
 
+  public boolean firstLoaded = false;
+
   public boolean modalShowing;
 
   public static final boolean loadSaves = true;

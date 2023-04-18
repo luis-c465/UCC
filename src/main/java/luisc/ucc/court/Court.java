@@ -2,6 +2,7 @@ package luisc.ucc.court;
 
 import luisc.lib.Obj;
 import luisc.ucc.App;
+import luisc.ucc.dialogue.BeginDialogue;
 import luisc.ucc.dialogue.Dialogue;
 import luisc.ucc.dialogue.Options;
 import luisc.ucc.dialogue.StartDialogue;
@@ -28,7 +29,12 @@ public class Court extends Obj {
     options = new StartOptions(a);
     options.setup();
 
-    dialogue = new StartDialogue(a);
+    if (a.firstLoaded) {
+      dialogue = new BeginDialogue(a);
+      a.mainScene.inCourt = true;
+    } else {
+      dialogue = new StartDialogue(a);
+    }
     dialogue.setup();
   }
 

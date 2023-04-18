@@ -50,6 +50,7 @@ public class Saver {
     saves = new XmlList<Data>(strategy);
 
     if (saves.size() == 0) {
+      a.firstLoaded = true;
       saves.add(new Data());
     }
 
