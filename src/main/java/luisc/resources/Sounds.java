@@ -33,7 +33,8 @@ public class Sounds extends ResourceHolder<AudioPlayer> {
     vent = l("vent.mp3");
     emergency = l("emergency.mp3");
     music = l("between.mp3");
-    music.setGain(-10);
+    music.setGain(-40);
+    // music.setVolume(0.1f);
     music.loop();
   }
 
