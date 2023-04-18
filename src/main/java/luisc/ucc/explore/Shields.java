@@ -10,11 +10,7 @@ public class Shields extends Exploration {
   }
 
   @Override
-  protected void _update() {
-    if (isClicked("Go back into hallway")) {
-      setExploration(new ComsHallway(a));
-    }
-  }
+  protected void _update() {}
 
   @Override
   protected void _setup() {
