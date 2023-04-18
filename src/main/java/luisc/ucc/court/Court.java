@@ -45,6 +45,9 @@ public class Court extends Obj {
       a.mainScene.ticksSwitched--;
     }
 
+    p.imageMode(PC.CORNER);
+    p.image(r.i.court, 0, 0, App.w, App.h);
+
     if (dialogue.done) {
       options.update();
     } else {
