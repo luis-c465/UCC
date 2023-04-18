@@ -50,7 +50,7 @@ public class Court extends Obj {
     } else {
       dialogue.update();
 
-      if (a.winner) {
+      if (a.winner && dialogue.almostDone) {
         p.imageMode(PC.CORNER);
         p.image(r.i.winner, 0, 0, App.w, App.h);
       }
