@@ -16,10 +16,10 @@ public class Map extends FullScreenModal {
     clickables =
       new Clickable[] {
         new MapBtn(a, "Cafeteria", 569, 353, 100, 100),
-        new MapBtn(a, "Medical", 386, 443, 60, 60),
         new MapBtn(a, "Security", 304, 463, 60, 60),
         new MapBtn(a, "Electrical", 400, 578, 60, 60),
         new MapBtn(a, "Coms", 664, 694, 60, 60),
+        new MapBtn(a, "Navigation", 933, 470, 60, 60),
         new MapBtn(a, "Weapons", 782, 335, 60, 60),
         new MapBtn(a, "Reactor", 131, 485, 60, 60),
         new MapBtn(a, "Left Engine", 228, 348, 60, 60),
@@ -41,8 +41,8 @@ public class Map extends FullScreenModal {
     super._update();
     if (isClicked("Cafeteria")) {
       set(new CafeteriaExploration(a));
-    } else if (isClicked("Medical")) {
-      set(new Medical(a));
+    } else if (isClicked("Navigation")) {
+      set(new Navigation(a));
     } else if (isClicked("Security")) {
       set(new Security(a));
     } else if (isClicked("Electrical")) {

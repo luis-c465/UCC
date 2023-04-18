@@ -10,29 +10,23 @@ public class Coms extends Exploration {
   }
 
   @Override
-  protected void _update() {
-    if (isClicked("venty")) {
-      r.sfx.vent.play(0);
-    }
-  }
+  protected void _update() {}
 
   @Override
   protected void _setup() {
-    bg = loadGif("options/coms.gif");
+    bg = a.loadImage("options/comns.png");
 
     clickables =
       new Clickable[] {
         new Evidence(
           a,
           "coms",
-          500,
-          275,
-          512,
-          75,
-          "MC: All the panels are broken??",
-          "MC: Where are we even going??????"
+          50,
+          341,
+          120,
+          347,
+          "MC: That's one phat amogus"
         ),
-        new Interactable(a, "venty", 500, 634, 144, 194),
       };
   }
 }
