@@ -15,6 +15,7 @@ public class Map extends FullScreenModal {
 
     clickables =
       new Clickable[] {
+        new MapBtn(a, "Medical", 390, 442, 98, 100),
         new MapBtn(a, "Cafeteria", 569, 353, 100, 100),
         new MapBtn(a, "Security", 304, 463, 60, 60),
         new MapBtn(a, "Electrical", 400, 578, 60, 60),
@@ -63,6 +64,8 @@ public class Map extends FullScreenModal {
       set(new Storage(a));
     } else if (isClicked("Shields")) {
       set(new Shields(a));
+    } else if (isClicked("Medical")) {
+      set(new Medical(a));
     }
 
     if (!show) return;

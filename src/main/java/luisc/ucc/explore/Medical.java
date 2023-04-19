@@ -1,5 +1,7 @@
 package luisc.ucc.explore;
 
+import luisc.lib.Clickable;
+import luisc.lib.PC;
 import luisc.ucc.App;
 
 public class Medical extends Exploration {
@@ -10,10 +12,20 @@ public class Medical extends Exploration {
 
   @Override
   protected void _update() {
-    if (isClicked("Get scanny")) {
+    if (isClicked("scanner")) {
       r.sfx.scan.play(0);
-    } else if (isClicked("Go into security")) {
-      setExploration(new Security(a));
+    }
+  }
+
+  @Override
+  protected void postUpdate() {
+    super.postUpdate();
+
+    if (r.sfx.scan.isPlaying()) {
+      push();
+      p.imageMode(PC.CENTER);
+      p.image(r.i.scan, 851, 700, 130, 130);
+      pop();
     }
   }
 
@@ -22,9 +34,6 @@ public class Medical extends Exploration {
     bg = p.loadImage("options/medical.png");
 
     clickables =
-      new ExplorationBtn[] {
-        new ExplorationBtn(a, "Get scanny", 800, 675),
-        new ExplorationBtn(a, "Go into security", 500, 900),
-      };
+      new Clickable[] { new Interactable(a, "scanner", 851, 675, 346, 362) };
   }
 }
