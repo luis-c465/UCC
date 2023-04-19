@@ -113,6 +113,13 @@ public final class App extends BaseApp {
     }
   }
 
+  @Override
+  public void keyPressed() {
+    if (key == 'b') {
+      scene = Scenes.StartUp;
+    }
+  }
+
   public boolean hasEvidence(String s) {
     return evidence.contains(s);
   }
