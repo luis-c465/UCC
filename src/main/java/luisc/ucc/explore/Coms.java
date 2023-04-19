@@ -12,7 +12,7 @@ public class Coms extends Exploration {
   @Override
   protected void _update() {
     if (isClicked("coms")) {
-      a.achievements.add("ass");
+      a.mainScene.achievementRender.add("ass");
     }
   }
 

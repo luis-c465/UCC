@@ -1,6 +1,7 @@
 package luisc.ucc.scene;
 
 import luisc.lib.Obj;
+import luisc.ucc.AchievementRender;
 import luisc.ucc.App;
 import luisc.ucc.court.Court;
 import luisc.ucc.explore.CafeteriaExploration;
@@ -19,6 +20,7 @@ public class MainScene extends Obj {
 
   public boolean inCourt = false;
 
+  public AchievementRender achievementRender;
   public Exploration exploration;
   public Court court;
   public Map map;
@@ -33,6 +35,9 @@ public class MainScene extends Obj {
 
     map = new Map(a);
     map.setup();
+
+    achievementRender = new AchievementRender(a);
+    achievementRender.setup();
   }
 
   @Override
@@ -44,6 +49,8 @@ public class MainScene extends Obj {
     }
 
     map.update();
+
+    achievementRender.update();
   }
 
   public MainScene(App a) {

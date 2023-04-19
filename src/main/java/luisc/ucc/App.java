@@ -97,6 +97,8 @@ public final class App extends BaseApp {
 
     achievementsScene = new Achievements(this);
     achievementsScene.setup();
+
+    mainScene.achievementRender.achievements = achievements;
   }
 
   @Override

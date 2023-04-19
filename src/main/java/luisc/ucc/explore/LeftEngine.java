@@ -15,7 +15,7 @@ public class LeftEngine extends Exploration {
       r.sfx.peppino.play(0);
     } else if (isClicked("!!!")) {
       r.sfx.metalPipe.play(0);
-      a.achievements.add("pipe");
+      a.mainScene.achievementRender.add("pipe");
     }
   }
 

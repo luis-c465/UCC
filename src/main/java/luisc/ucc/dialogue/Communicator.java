@@ -112,7 +112,7 @@ public class Communicator extends Dialogue {
       );
       a.winner = true;
 
-      a.achievements.add("ltg");
+      a.mainScene.achievementRender.add("ltg");
     } else {
       add("MC: Can anyone verify?", "communicator/verify");
       add("[Everyone says no]");

@@ -17,6 +17,7 @@ public class Resources {
   public Fonts f;
   public Characters ch;
   public Sounds sfx;
+  public Achievements achievements;
 
   public Resources(BaseApp p) {
     i = new Images(p);
@@ -25,5 +26,6 @@ public class Resources {
     f = new Fonts(p);
     ch = new Characters(p);
     sfx = new Sounds(p);
+    achievements = new Achievements(p);
   }
 }
