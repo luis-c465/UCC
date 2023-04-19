@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import luisc.lib.BaseApp;
 import luisc.ucc.data.Saver;
+import luisc.ucc.scene.Achievements;
 import luisc.ucc.scene.DLC;
 import luisc.ucc.scene.MainScene;
 import luisc.ucc.scene.Scenes;
@@ -26,6 +27,7 @@ public final class App extends BaseApp {
 
   public MainScene mainScene;
   public DLC dlc;
+  public Achievements achievementsScene;
 
   public Saver saver;
 
@@ -37,6 +39,7 @@ public final class App extends BaseApp {
   // Data values
   public int test;
   public Set<String> evidence = new HashSet<>();
+  public Set<String> achievements = new HashSet<>();
 
   @Override
   public void draw() {
@@ -66,6 +69,9 @@ public final class App extends BaseApp {
       case Quit:
         exit();
         break;
+      case Achievements:
+        achievementsScene.update();
+        break;
       default:
         break;
     }
@@ -74,6 +80,7 @@ public final class App extends BaseApp {
 
   @Override
   protected void setupAppClasses() {
+    achievements = new HashSet<>();
     // Loading saves takes a long time for debugging purposes
     if (loadSaves) {
       saver = new Saver(this);
@@ -87,6 +94,9 @@ public final class App extends BaseApp {
 
     dlc = new DLC(this);
     dlc.setup();
+
+    achievementsScene = new Achievements(this);
+    achievementsScene.setup();
   }
 
   @Override

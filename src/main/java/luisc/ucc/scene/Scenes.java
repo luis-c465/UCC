@@ -6,5 +6,6 @@ public enum Scenes {
   HelpModal,
   DLC,
   Extras,
+  Achievements,
   Quit,
 }

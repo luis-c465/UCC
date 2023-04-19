@@ -16,6 +16,7 @@ public class StartUp extends Transitionable {
 
   private PlayBtn startGameBtn;
   private BehindTheScenesBtn BTSBtn;
+  private AchievementsBtn achievementsBtn;
   private DownloadableContentBtn DLCBtn;
   private QuitBtn quitBtn;
 
@@ -34,6 +35,9 @@ public class StartUp extends Transitionable {
 
     quitBtn = new QuitBtn(a);
     quitBtn.setup();
+
+    achievementsBtn = new AchievementsBtn(a);
+    achievementsBtn.setup();
   }
 
   @Override
@@ -45,6 +49,7 @@ public class StartUp extends Transitionable {
     BTSBtn.update();
     DLCBtn.update();
     quitBtn.update();
+    achievementsBtn.update();
   }
 
   @Override
@@ -174,5 +179,33 @@ public class StartUp extends Transitionable {
 
   public StartUp(App app) {
     super(app);
+  }
+
+  private class AchievementsBtn extends Btn {
+
+    public AchievementsBtn(App app) {
+      super(app);
+    }
+
+    @Override
+    public void _setup() {
+      x = App.cw + 300;
+      y = 700;
+      w = 200;
+
+      txt = "Achievements";
+      color = Colors.btnColor;
+      colorHover = Colors.btnColorHover;
+      txt_size = 20;
+      txt_c = 255;
+      txt_space = 30;
+
+      hasIcon = false;
+    }
+
+    @Override
+    protected void onClick() {
+      a.scene = Scenes.Achievements;
+    }
   }
 }

@@ -11,5 +11,6 @@ import java.util.Set;
 public class Data extends BaseData {
 
   public Set<String> evidence = new HashSet<>();
+  public Set<String> achievements = new HashSet<>();
   public int test = 0;
 }
