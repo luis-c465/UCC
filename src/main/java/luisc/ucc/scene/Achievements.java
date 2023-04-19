@@ -47,7 +47,7 @@ public class Achievements extends Obj {
       String key = entry.getKey();
 
       boolean has = a.achievements.contains(key);
-      PImage value = has ? entry.getValue() : lockedImages.get(key);
+      PImage value = has ? unlockedImages.get(key) : lockedImages.get(key);
 
       int row = i / 3;
       p.imageMode(PC.CORNER);

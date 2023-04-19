@@ -56,6 +56,7 @@ public class Court extends Obj {
       if (a.winner && dialogue.almostDone) {
         p.imageMode(PC.CORNER);
         p.image(r.i.winner, 0, 0, App.w, App.h);
+        a.achievements.add("winner");
       }
     }
   }

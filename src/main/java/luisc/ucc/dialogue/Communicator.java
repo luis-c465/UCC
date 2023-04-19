@@ -111,6 +111,8 @@ public class Communicator extends Dialogue {
         "communicator/lmfao"
       );
       a.winner = true;
+
+      a.achievements.add("ltg");
     } else {
       add("MC: Can anyone verify?", "communicator/verify");
       add("[Everyone says no]");

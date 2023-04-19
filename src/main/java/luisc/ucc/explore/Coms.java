@@ -10,7 +10,11 @@ public class Coms extends Exploration {
   }
 
   @Override
-  protected void _update() {}
+  protected void _update() {
+    if (isClicked("coms")) {
+      a.achievements.add("ass");
+    }
+  }
 
   @Override
   protected void _setup() {

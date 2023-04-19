@@ -13,6 +13,7 @@ public class Reactor extends Exploration {
   protected void _update() {
     if (isClicked("buttons")) {
       r.sfx.reactor.play(0);
+      a.achievements.add("reactor");
     }
   }
 
