@@ -20,7 +20,7 @@ public abstract class Dialogue extends Obj {
 
   public boolean skipDialogue = true;
 
-  private static final int charStep = 2;
+  private static final int charStep = 5;
   private static final int textSize = 25;
 
   public static final int characterWidth = 250;
@@ -250,6 +250,17 @@ public abstract class Dialogue extends Obj {
         shouldCheck = true;
       }
 
+      if (p.keyCode == kc && currentText + 2 < text.size()) {
+        if (currentText + 2 < text.size()) {
+          currentCharacter = 0;
+          currentText++;
+        } else {
+          currentCharacter = text.get(currentText).text.length() - 1;
+        }
+        App.println("Clicked ");
+
+        p.keyCode = 0;
+      }
       super.preUpdate();
     }
 
